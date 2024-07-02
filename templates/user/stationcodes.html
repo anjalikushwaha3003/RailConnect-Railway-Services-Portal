@@ -1,0 +1,6182 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+Station Codes and Station Names | RailConnect
+{% endblock  %}
+{% block content %}
+  <!--Main Starts-->
+  <!--part1 start-->
+  <div class="row  h-100 w-100 m-auto" style="z-index:1 !important; background:#7300ff;">
+    <div class="col-sm-12 col-lg-12 col-md-12 w-75 m-auto h-75">
+<h4 class="text-light m-auto mt-5 mb-4 text-center">Indian Railway stations</h4>
+    </div>
+  </div>
+<div class="row bg-light">
+<nav aria-label="breadcrumb ps-1">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/user/">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Stations</li>
+  </ol>
+</nav>
+
+  <div class="col-sm-12 col-lg-12 col-md-12 w-75 m-auto bg-white">
+    <h4>Train Station and Station code</h4>
+    <p>Indian Railways is undoubtedly one of the largest railway networks in the world. It connects cities, towns, and villages from all corners of India, 
+      providing an extensive connection that allows passengers to travel conveniently between different locations.</p>
+      <p>Railways not only offer convenience but are also cost-effective and easy to book. It's no wonder that travellers from across the country rely on it for their journeys.</p>
+      <p>Consequently, the list of Indian Railway stations is vast and can be overwhelming, presenting a challenge for both experienced travellers and newcomers when it comes to selecting the right train stations for their journey.</p>
+      <p>Even though the Indian Railway Enquiry Service is accessible for assistance, it can become confusing at times, particularly if you are not familiar with station codes. At such a juncture, Railway station code search becomes tough.
+
+      </p>
+      <p>Acknowledging this problem, ixigo has developed a simple list of railway stations with names that not only provides data on trains between major stations but also sheds light on information about all trains operating along India's railway routes at any given time.
+
+      </p>
+  </div>
+</div>
+  <!---part2 end-->
+  <!--part3 start-->
+  {% if not data %}
+ <div class="row bg-light">
+  <div class="col-sm-12 col-lg-12 col-md-12 mt-4 mb-4 m-auto bg-white w-75">
+    <table class="table">
+      <thead>
+        
+        <tr class="bg-primary">
+          <th scope="col">Station code</th>
+          <th scope="col">station Name</th>
+          <th scope="col">City</th>
+          <th scope="col">Trains</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>ACND</td>
+          <td><a href="/trains/stations/ACND">A N Dev Nagar</a></td>
+          <td>A N Dev Nagar</td>
+          <td>14</td>
+        </tr>
+        <tr>
+          <td>AHA</td>
+          <td><a href="/trains/stations/AHA">Abhaipur</a></td>
+          <td>Abhaipur</td>
+          <td>28</td>
+        </tr>
+        <tr>
+          <td>AYU</td>
+          <td><a href="/trains/stations/AYU">Abhayapuri Asam</a></td>
+          <td>Abhayapuri Asam</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>ABS</td>
+          <td><a href="/trains/stations/ABS">Abohar</a></td>
+          <td>Abohar</td>
+          <td>9</td>
+        </tr>
+        <tr>
+          <td>ABR</td>
+          <td><a href="/trains/stations/ABR">Abu Road</a></td>
+          <td>Abu Road</td>
+          <td>40</td>
+        </tr>
+        <tr>
+          <td>ULD</td>
+          <td><a href="/trains/stations/ULD">Achalda</a></td>
+          <td>Achalda</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>AH</td>
+          <td><a href="/trains/stations/AH">Achhnera Junction</a></td>
+          <td>Achhnera Junction</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td>ADD</td>
+          <td><a href="/trains/stations/ADD">Adas Road</a></td>
+          <td>Adas Road</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>ADVI</td>
+          <td><a href="/trains/stations/ADVI">Adavali</a></td>
+          <td>Adavali</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>AAR</td>
+          <td><a href="/trains/stations/AAR">Adesar</a></td>
+          <td>Adesar</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>ABZ</td>
+          <td><a href="/trains/stations/ABZ">Adgaon Buzurg</a></td>
+          <td>Adgaon Buzurg</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>ADTL</td>
+          <td><a href="/trains/stations/ADTL">Adhartal</a></td>
+          <td>Adhartal</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>ADQ</td>
+          <td><a href="/trains/stations/ADQ">Adhikari</a></td>
+          <td>Adhikari</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>ADST</td>
+          <td><a href="/trains/stations/ADST">Adi Saptagram</a></td>
+          <td>Adi Saptagram</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>ADB</td>
+          <td><a href="/trains/stations/ADB">Adilabad</a></td>
+          <td>Adilabad</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>ADF</td>
+          <td><a href="/trains/stations/ADF">Adina</a></td>
+          <td>Adina</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>AI</td>
+          <td><a href="/trains/stations/AI">Adipur</a></td>
+          <td>Adipur</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>ADTP</td>
+          <td><a href="/trains/stations/ADTP">Adityapur</a></td>
+          <td>Adityapur</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>AD</td>
+          <td><a href="/trains/stations/AD">Adoni</a></td>
+          <td>Adoni</td>
+          <td>32</td>
+        </tr>
+        <tr>
+          <td>ADRA</td>
+          <td><a href="/trains/stations/ADRA">Adra Junction</a></td>
+          <td>Adra Junction</td>
+          <td>20</td>
+        </tr>
+        <tr>
+          <td>ANDI</td>
+          <td><a href="/trains/stations/ANDI">Adrsh Ngr Delhi</a></td>
+          <td>Delhi</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>ADT</td>
+          <td><a href="/trains/stations/ADT">Aduturai</a></td>
+          <td>Aduturai</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>AGTL</td>
+          <td><a href="/trains/stations/AGTL">Agartala</a></td>
+          <td>Agartala</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>AGD</td>
+          <td><a href="/trains/stations/AGD">Agasod</a></td>
+          <td>Agasod</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>AWP</td>
+          <td><a href="/trains/stations/AWP">Aghwanpur</a></td>
+          <td>Aghwanpur</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>AGMN</td>
+          <td><a href="/trains/stations/AGMN">Agomoni</a></td>
+          <td>Agomoni</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>AGY</td>
+          <td><a href="/trains/stations/AGY">Agori Khas</a></td>
+          <td>Agori Khas</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>AGC</td>
+          <td><a href="/trains/stations/AGC">Agra Cantt</a></td>
+          <td>Agra</td>
+          <td>112</td>
+        </tr>
+        <tr>
+          <td>AGA</td>
+          <td><a href="/trains/stations/AGA">Agra City</a></td>
+          <td>Agra</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>AF</td>
+          <td><a href="/trains/stations/AF">Agra Fort</a></td>
+          <td>Agra</td>
+          <td>32</td>
+        </tr>
+        <tr>
+          <td>AHLR</td>
+          <td><a href="/trains/stations/AHLR">Ahalyapur</a></td>
+          <td>Ahalyapur</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>AHD</td>
+          <td><a href="/trains/stations/AHD">Aherwadi</a></td>
+          <td>Aherwadi</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>AHN</td>
+          <td><a href="/trains/stations/AHN">Ahiran</a></td>
+          <td>Ahiran</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>AHH</td>
+          <td><a href="/trains/stations/AHH">Ahmadgarh</a></td>
+          <td>Ahmadgarh</td>
+          <td>7</td>
+        </tr>
+        <tr>
+          <td>ANG</td>
+          <td><a href="/trains/stations/ANG">Ahmadnagar</a></td>
+          <td>Ahmadnagar</td>
+          <td>30</td>
+        </tr>
+        <tr>
+          <td>AMP</td>
+          <td><a href="/trains/stations/AMP">Ahmadpur Junction</a></td>
+          <td>Ahmadpur</td>
+          <td>14</td>
+        </tr>
+        <tr>
+          <td>ADI</td>
+          <td><a href="/trains/stations/ADI">Ahmedabad Junction</a></td>
+          <td>Ahmedabad</td>
+          <td>130</td>
+        </tr>
+        <tr>
+          <td>ADIJ</td>
+          <td><a href="/trains/stations/ADIJ">Ahmedabad Mg</a></td>
+          <td>Ahmedabad Mg</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>ARW</td>
+          <td><a href="/trains/stations/ARW">Ahraura Road</a></td>
+          <td>Ahraura Road</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>ASH</td>
+          <td><a href="/trains/stations/ASH">Aishbagh</a></td>
+          <td>Aishbagh</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>AIT</td>
+          <td><a href="/trains/stations/AIT">Ait</a></td>
+          <td>Ait</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>ATMO</td>
+          <td><a href="/trains/stations/ATMO">Aithal</a></td>
+          <td>Aithal</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>AJR</td>
+          <td><a href="/trains/stations/AJR">Ajaibpur</a></td>
+          <td>Ajaibpur</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>ANI</td>
+          <td><a href="/trains/stations/ANI">Ajanti</a></td>
+          <td>Ajanti</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>AIA</td>
+          <td><a href="/trains/stations/AIA">Ajaraka</a></td>
+          <td>Ajaraka</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>AJ</td>
+          <td><a href="/trains/stations/AJ">Ajgain</a></td>
+          <td>Ajgain</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>AJP</td>
+          <td><a href="/trains/stations/AJP">Ajjampur</a></td>
+          <td>Ajjampur</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>AII</td>
+          <td><a href="/trains/stations/AII">Ajmer Junction</a></td>
+          <td>Ajmer Junction</td>
+          <td>44</td>
+        </tr>
+        <tr>
+          <td>AJNI</td>
+          <td><a href="/trains/stations/AJNI">Ajni</a></td>
+          <td>Ajni</td>
+          <td>14</td>
+        </tr>
+        <tr>
+          <td>AJN</td>
+          <td><a href="/trains/stations/AJN">Ajnod</a></td>
+          <td>Ajnod</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>AKOR</td>
+          <td><a href="/trains/stations/AKOR">Akalkot Road</a></td>
+          <td>Akalkot Road</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>AKT</td>
+          <td><a href="/trains/stations/AKT">Akaltara</a></td>
+          <td>Akaltara</td>
+          <td>16</td>
+        </tr>
+        <tr>
+          <td>AKE</td>
+          <td><a href="/trains/stations/AKE">Akanapet</a></td>
+          <td>Akanapet</td>
+          <td>7</td>
+        </tr>
+        <tr>
+          <td>AMY</td>
+          <td><a href="/trains/stations/AMY">Akathumuri</a></td>
+          <td>Akathumuri</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>AKJ</td>
+          <td><a href="/trains/stations/AKJ">Akbarganj</a></td>
+          <td>Akbarganj</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>AKN</td>
+          <td><a href="/trains/stations/AKN">Akbarnagar</a></td>
+          <td>Akbarnagar</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td>ABP</td>
+          <td><a href="/trains/stations/ABP">Akbarpur</a></td>
+          <td>Akbarpur</td>
+          <td>29</td>
+        </tr>
+        <tr>
+          <td>AKVD</td>
+          <td><a href="/trains/stations/AKVD">Akividu</a></td>
+          <td>Akividu</td>
+          <td>14</td>
+        </tr>
+        <tr>
+          <td>API</td>
+          <td><a href="/trains/stations/API">Akkaraippatti</a></td>
+          <td>Akkaraippatti</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>AKD</td>
+          <td><a href="/trains/stations/AKD">Akodia</a></td>
+          <td>Akodia</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>AK</td>
+          <td><a href="/trains/stations/AK">Akola Junction</a></td>
+          <td>Akola Junction</td>
+          <td>46</td>
+        </tr>
+        <tr>
+          <td>AKR</td>
+          <td><a href="/trains/stations/AKR">Akolner</a></td>
+          <td>Akolner</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>AKOT</td>
+          <td><a href="/trains/stations/AKOT">Akot</a></td>
+          <td>Akot</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>AYRN</td>
+          <td><a href="/trains/stations/AYRN">Akshaywat R Ngr</a></td>
+          <td>Akshaywat R Ngr</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>AKRD</td>
+          <td><a href="/trains/stations/AKRD">Akurdi</a></td>
+          <td>Akurdi</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>ALJ</td>
+          <td><a href="/trains/stations/ALJ">Alai</a></td>
+          <td>Alai</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>ALAI</td>
+          <td><a href="/trains/stations/ALAI">Alai</a></td>
+          <td>Alai</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>ALM</td>
+          <td><a href="/trains/stations/ALM">Alamanda</a></td>
+          <td>Alamanda</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>AMG</td>
+          <td><a href="/trains/stations/AMG">Alamnagar</a></td>
+          <td>Alamnagar</td>
+          <td>13</td>
+        </tr>
+        <tr>
+          <td>ALMR</td>
+          <td><a href="/trains/stations/ALMR">Alampur</a></td>
+          <td>Alampur</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>ALN</td>
+          <td><a href="/trains/stations/ALN">Alandi</a></td>
+          <td>Alandi</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>ALER</td>
+          <td><a href="/trains/stations/ALER">Aler</a></td>
+          <td>Aler</td>
+          <td>17</td>
+        </tr>
+        <tr>
+          <td>AIG</td>
+          <td><a href="/trains/stations/AIG">Algawan</a></td>
+          <td>Algawan</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>ALB</td>
+          <td><a href="/trains/stations/ALB">Alia Bada</a></td>
+          <td>Alia Bada</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>ALJN</td>
+          <td><a href="/trains/stations/ALJN">Aligarh Junction</a></td>
+          <td>Aligarh Junction</td>
+          <td>64</td>
+        </tr>
+        <tr>
+          <td>APD</td>
+          <td><a href="/trains/stations/APD">Alipur Duar</a></td>
+          <td>Alipur Duar</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>APDJ</td>
+          <td><a href="/trains/stations/APDJ">Alipur Duar Junction</a></td>
+          <td>Alipur Duar Junction</td>
+          <td>11</td>
+        </tr>
+        <tr>
+          <td>ALY</td>
+          <td><a href="/trains/stations/ALY">Allahabad City</a></td>
+          <td>Allahabad</td>
+          <td>19</td>
+        </tr>
+        <tr>
+          <td>ALD</td>
+          <td><a href="/trains/stations/ALD">Allahabad Junction</a></td>
+          <td>Allahabad</td>
+          <td>163</td>
+        </tr>
+        <tr>
+          <td>ALLP</td>
+          <td><a href="/trains/stations/ALLP">Alleppey</a></td>
+          <td>Alleppey</td>
+          <td>33</td>
+        </tr>
+        <tr>
+          <td>AXR</td>
+          <td><a href="/trains/stations/AXR">Alluru Road</a></td>
+          <td>Alluru Road</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>LMT</td>
+          <td><a href="/trains/stations/LMT">Almatti</a></td>
+          <td>Almatti</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>LWR</td>
+          <td><a href="/trains/stations/LWR">Alnavar Junction</a></td>
+          <td>Alnavar Junction</td>
+          <td>15</td>
+        </tr>
+        <tr>
+          <td>ALNI</td>
+          <td><a href="/trains/stations/ALNI">Alniya</a></td>
+          <td>Alniya</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>AUB</td>
+          <td><a href="/trains/stations/AUB">Aluabari Road</a></td>
+          <td>Aluabari Road</td>
+          <td>14</td>
+        </tr>
+        <tr>
+          <td>AWY</td>
+          <td><a href="/trains/stations/AWY">Aluva</a></td>
+          <td>Aluva</td>
+          <td>82</td>
+        </tr>
+        <tr>
+          <td>ALW</td>
+          <td><a href="/trains/stations/ALW">Alwal</a></td>
+          <td>Alwal</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>AWR</td>
+          <td><a href="/trains/stations/AWR">Alwar</a></td>
+          <td>Alwar</td>
+          <td>30</td>
+        </tr>
+        <tr>
+          <td>AGZ</td>
+          <td><a href="/trains/stations/AGZ">Amagura</a></td>
+          <td>Amagura</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>AN</td>
+          <td><a href="/trains/stations/AN">Amalner</a></td>
+          <td>Amalner</td>
+          <td>13</td>
+        </tr>
+        <tr>
+          <td>AML</td>
+          <td><a href="/trains/stations/AML">Amalsad</a></td>
+          <td>Amalsad</td>
+          <td>9</td>
+        </tr>
+        <tr>
+          <td>ARD</td>
+          <td><a href="/trains/stations/ARD">Amarda Road</a></td>
+          <td>Amarda Road</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>AGR</td>
+          <td><a href="/trains/stations/AGR">Amargarh</a></td>
+          <td>Amargarh</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>APA</td>
+          <td><a href="/trains/stations/APA">Amarpura</a></td>
+          <td>Amarpura</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>AMPR</td>
+          <td><a href="/trains/stations/AMPR">Amarpura Rathan</a></td>
+          <td>Amarpura Rathan</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>AMS</td>
+          <td><a href="/trains/stations/AMS">Amausi</a></td>
+          <td>Lucknow</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>AADR</td>
+          <td><a href="/trains/stations/AADR">Amb  Andaura</a></td>
+          <td>Amb  Andaura</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>AGB</td>
+          <td><a href="/trains/stations/AGB">Ambagaon</a></td>
+          <td>Ambagaon</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>UMB</td>
+          <td><a href="/trains/stations/UMB">Ambala Cant Junction</a></td>
+          <td>Ambala</td>
+          <td>124</td>
+        </tr>
+        <tr>
+          <td>UBC</td>
+          <td><a href="/trains/stations/UBC">Ambala City</a></td>
+          <td>Ambala</td>
+          <td>40</td>
+        </tr>
+        <tr>
+          <td>AMPA</td>
+          <td><a href="/trains/stations/AMPA">Ambalapuzha</a></td>
+          <td>Ambalapuzha</td>
+          <td>18</td>
+        </tr>
+        <tr>
+          <td>ABLE</td>
+          <td><a href="/trains/stations/ABLE">Ambale</a></td>
+          <td>Ambale</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>ABFC</td>
+          <td><a href="/trains/stations/ABFC">Ambari Falakata</a></td>
+          <td>Ambari Falakata</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>ABH</td>
+          <td><a href="/trains/stations/ABH">Ambarnath</a></td>
+          <td>Ambarnath</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>ABSA</td>
+          <td><a href="/trains/stations/ABSA">Ambasa</a></td>
+          <td>Ambasa</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>ASD</td>
+          <td><a href="/trains/stations/ASD">Ambasamudram</a></td>
+          <td>Ambasamudram</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>ABI</td>
+          <td><a href="/trains/stations/ABI">Ambaturai</a></td>
+          <td>Ambaturai</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>ABKA</td>
+          <td><a href="/trains/stations/ABKA">Ambika Kalna</a></td>
+          <td>Ambika Kalna</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>AMBR</td>
+          <td><a href="/trains/stations/AMBR">Ambika Rohina</a></td>
+          <td>Ambika Rohina</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>ABKP</td>
+          <td><a href="/trains/stations/ABKP">Ambikapur</a></td>
+          <td>Ambikapur</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>ABD</td>
+          <td><a href="/trains/stations/ABD">Ambli Road</a></td>
+          <td>Ambli Road</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>UMN</td>
+          <td><a href="/trains/stations/UMN">Ambliyasan</a></td>
+          <td>Ambliyasan</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>AMB</td>
+          <td><a href="/trains/stations/AMB">Ambodala</a></td>
+          <td>Ambodala</td>
+          <td>15</td>
+        </tr>
+        <tr>
+          <td>AB</td>
+          <td><a href="/trains/stations/AB">Ambur</a></td>
+          <td>Ambur</td>
+          <td>16</td>
+        </tr>
+        <tr>
+          <td>UDR</td>
+          <td><a href="/trains/stations/UDR">Amdara</a></td>
+          <td>Amdara</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>AME</td>
+          <td><a href="/trains/stations/AME">Amethi</a></td>
+          <td>Amethi</td>
+          <td>18</td>
+        </tr>
+        <tr>
+          <td>AGN</td>
+          <td><a href="/trains/stations/AGN">Amgaon</a></td>
+          <td>Amgaon</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>AGI</td>
+          <td><a href="/trains/stations/AGI">Amguri</a></td>
+          <td>Amguri</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>AMLA</td>
+          <td><a href="/trains/stations/AMLA">Amla Junction</a></td>
+          <td>Amla Junction</td>
+          <td>35</td>
+        </tr>
+        <tr>
+          <td>AAL</td>
+          <td><a href="/trains/stations/AAL">Amlai</a></td>
+          <td>Amlai</td>
+          <td>9</td>
+        </tr>
+        <tr>
+          <td>AMX</td>
+          <td><a href="/trains/stations/AMX">Amlakhurd</a></td>
+          <td>Amlakhurd</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>AMLI</td>
+          <td><a href="/trains/stations/AMLI">Amli</a></td>
+          <td>Amli</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>ANB</td>
+          <td><a href="/trains/stations/ANB">Ammanabrolu</a></td>
+          <td>Ammanabrolu</td>
+          <td>7</td>
+        </tr>
+        <tr>
+          <td>AMSA</td>
+          <td><a href="/trains/stations/AMSA">Ammasandra</a></td>
+          <td>Ammasandra</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>AMQ</td>
+          <td><a href="/trains/stations/AMQ">Ammuguda</a></td>
+          <td>Ammuguda</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>AONI</td>
+          <td><a href="/trains/stations/AONI">Amoni</a></td>
+          <td>Amoni</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>AMI</td>
+          <td><a href="/trains/stations/AMI">Amravati</a></td>
+          <td>Amravati</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>AMC</td>
+          <td><a href="/trains/stations/AMC">Amritapura</a></td>
+          <td>Amritapura</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>ASR</td>
+          <td><a href="/trains/stations/ASR">Amritsar Junction</a></td>
+          <td>Amritsar</td>
+          <td>56</td>
+        </tr>
+        <tr>
+          <td>AMRO</td>
+          <td><a href="/trains/stations/AMRO">Amroha</a></td>
+          <td>Amroha</td>
+          <td>30</td>
+        </tr>
+        <tr>
+          <td>AKP</td>
+          <td><a href="/trains/stations/AKP">Anakapalle</a></td>
+          <td>Anakapalle</td>
+          <td>33</td>
+        </tr>
+        <tr>
+          <td>ANND</td>
+          <td><a href="/trains/stations/ANND">Anand Junction</a></td>
+          <td>Anand</td>
+          <td>82</td>
+        </tr>
+        <tr>
+          <td>ANDN</td>
+          <td><a href="/trains/stations/ANDN">Anand Nagar</a></td>
+          <td>Anand Nagar</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>ANVR</td>
+          <td><a href="/trains/stations/ANVR">Anand Vihar</a></td>
+          <td>New Delhi</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>ANVT</td>
+          <td><a href="/trains/stations/ANVT">Anand Vihar Trm</a></td>
+          <td>Anand Vihar Trm</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>ANF</td>
+          <td><a href="/trains/stations/ANF">Anandapuram</a></td>
+          <td>Anandapuram</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>ANSB</td>
+          <td><a href="/trains/stations/ANSB">Anandpur Sahib</a></td>
+          <td>Anandpur Sahib</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>ATP</td>
+          <td><a href="/trains/stations/ATP">Anantapur</a></td>
+          <td>Anantapur</td>
+          <td>37</td>
+        </tr>
+        <tr>
+          <td>ANT</td>
+          <td><a href="/trains/stations/ANT">Anantnag</a></td>
+          <td>Anantnag</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>APT</td>
+          <td><a href="/trains/stations/APT">Anaparti</a></td>
+          <td>Anaparti</td>
+          <td>17</td>
+        </tr>
+        <tr>
+          <td>ANR</td>
+          <td><a href="/trains/stations/ANR">Anara</a></td>
+          <td>Anara</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>ANAS</td>
+          <td><a href="/trains/stations/ANAS">Anas</a></td>
+          <td>Anas</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>AVN</td>
+          <td><a href="/trains/stations/AVN">Anavardikhanpet</a></td>
+          <td>Anavardikhanpet</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>ACL</td>
+          <td><a href="/trains/stations/ACL">Ancheli</a></td>
+          <td>Ancheli</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>UDL</td>
+          <td><a href="/trains/stations/UDL">Andal Junction</a></td>
+          <td>Andal Junction</td>
+          <td>30</td>
+        </tr>
+        <tr>
+          <td>ADH</td>
+          <td><a href="/trains/stations/ADH">Andheri</a></td>
+          <td>Mumbai</td>
+          <td>21</td>
+        </tr>
+        <tr>
+          <td>ADL</td>
+          <td><a href="/trains/stations/ADL">Andul</a></td>
+          <td>Andul</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>AAM</td>
+          <td><a href="/trains/stations/AAM">Angadippuram</a></td>
+          <td>Angadippuram</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>AFK</td>
+          <td><a href="/trains/stations/AFK">Angamali</a></td>
+          <td>Angamali</td>
+          <td>30</td>
+        </tr>
+        <tr>
+          <td>AAG</td>
+          <td><a href="/trains/stations/AAG">Angar</a></td>
+          <td>Angar</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>ANGL</td>
+          <td><a href="/trains/stations/ANGL">Angul</a></td>
+          <td>Angul</td>
+          <td>17</td>
+        </tr>
+        <tr>
+          <td>ANO</td>
+          <td><a href="/trains/stations/ANO">Anjani</a></td>
+          <td>Anjani</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>AJE</td>
+          <td><a href="/trains/stations/AJE">Anjar</a></td>
+          <td>Anjar</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>AJI</td>
+          <td><a href="/trains/stations/AJI">Anjhi Shahabad</a></td>
+          <td>Anjhi Shahabad</td>
+          <td>14</td>
+        </tr>
+        <tr>
+          <td>ANKX</td>
+          <td><a href="/trains/stations/ANKX">Ank Mmr Direct</a></td>
+          <td>Ank Mmr Direct</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>ANK</td>
+          <td><a href="/trains/stations/ANK">Ankai</a></td>
+          <td>Ankai</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>AKV</td>
+          <td><a href="/trains/stations/AKV">Ankleshwar Junction</a></td>
+          <td>Ankleshwar</td>
+          <td>41</td>
+        </tr>
+        <tr>
+          <td>ANKL</td>
+          <td><a href="/trains/stations/ANKL">Ankola</a></td>
+          <td>Ankola</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>ANH</td>
+          <td><a href="/trains/stations/ANH">Ankorah Akorha</a></td>
+          <td>Ankorah Akorha</td>
+          <td>7</td>
+        </tr>
+        <tr>
+          <td>ANV</td>
+          <td><a href="/trains/stations/ANV">Annavaram</a></td>
+          <td>Annavaram</td>
+          <td>25</td>
+        </tr>
+        <tr>
+          <td>NGR</td>
+          <td><a href="/trains/stations/NGR">Annigeri</a></td>
+          <td>Annigeri</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>ANPR</td>
+          <td><a href="/trains/stations/ANPR">Anpara</a></td>
+          <td>Anpara</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>ATH</td>
+          <td><a href="/trains/stations/ATH">Antah</a></td>
+          <td>Antah</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>ANTU</td>
+          <td><a href="/trains/stations/ANTU">Antu</a></td>
+          <td>Antu</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>AUBR</td>
+          <td><a href="/trains/stations/AUBR">Anugraha N Road</a></td>
+          <td>Anugraha N Road</td>
+          <td>24</td>
+        </tr>
+        <tr>
+          <td>APR</td>
+          <td><a href="/trains/stations/APR">Anuppur Junction</a></td>
+          <td>Anuppur Junction</td>
+          <td>22</td>
+        </tr>
+        <tr>
+          <td>AUS</td>
+          <td><a href="/trains/stations/AUS">Anupshahr</a></td>
+          <td>Anupshahr</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>AO</td>
+          <td><a href="/trains/stations/AO">Aonla</a></td>
+          <td>Aonla</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td>APL</td>
+          <td><a href="/trains/stations/APL">Appikatla</a></td>
+          <td>Appikatla</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>APTA</td>
+          <td><a href="/trains/stations/APTA">Apta</a></td>
+          <td>Apta</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>ARA</td>
+          <td><a href="/trains/stations/ARA">Ara</a></td>
+          <td>Ara</td>
+          <td>58</td>
+        </tr>
+        <tr>
+          <td>ARAG</td>
+          <td><a href="/trains/stations/ARAG">Arag</a></td>
+          <td>Arag</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>AJJ</td>
+          <td><a href="/trains/stations/AJJ">Arakkonam</a></td>
+          <td>Arakkonam</td>
+          <td>70</td>
+        </tr>
+        <tr>
+          <td>ARK</td>
+          <td><a href="/trains/stations/ARK">Arakku</a></td>
+          <td>Arakku</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>AAY</td>
+          <td><a href="/trains/stations/AAY">Aralvaymozhi</a></td>
+          <td>Aralvaymozhi</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>ARN</td>
+          <td><a href="/trains/stations/ARN">Arand</a></td>
+          <td>Arand</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>ANMD</td>
+          <td><a href="/trains/stations/ANMD">Arang Mahanadi</a></td>
+          <td>Arang Mahanadi</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>ARR</td>
+          <td><a href="/trains/stations/ARR">Arariya</a></td>
+          <td>Arariya</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>ARQ</td>
+          <td><a href="/trains/stations/ARQ">Arariya Court</a></td>
+          <td>Arariya Court</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>AVRD</td>
+          <td><a href="/trains/stations/AVRD">Aravali Road</a></td>
+          <td>Aravali Road</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>AVK</td>
+          <td><a href="/trains/stations/AVK">Aravankadu</a></td>
+          <td>Aravankadu</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>ARGD</td>
+          <td><a href="/trains/stations/ARGD">Arigada</a></td>
+          <td>Arigada</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>ALU</td>
+          <td><a href="/trains/stations/ALU">Ariyalur</a></td>
+          <td>Ariyalur</td>
+          <td>24</td>
+        </tr>
+        <tr>
+          <td>AS</td>
+          <td><a href="/trains/stations/AS">Arjansar</a></td>
+          <td>Arjansar</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>AJU</td>
+          <td><a href="/trains/stations/AJU">Arjuni</a></td>
+          <td>Arjuni</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>ARE</td>
+          <td><a href="/trains/stations/ARE">Arnetha</a></td>
+          <td>Arnetha</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>ARV</td>
+          <td><a href="/trains/stations/ARV">Arni Road</a></td>
+          <td>Arni Road</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>ARNA</td>
+          <td><a href="/trains/stations/ARNA">Arnia</a></td>
+          <td>Arnia</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>ASK</td>
+          <td><a href="/trains/stations/ASK">Arsikere Junction</a></td>
+          <td>Arsikere</td>
+          <td>28</td>
+        </tr>
+        <tr>
+          <td>ANY</td>
+          <td><a href="/trains/stations/ANY">Arumuganeri</a></td>
+          <td>Arumuganeri</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>ARCL</td>
+          <td><a href="/trains/stations/ARCL">Arunachal</a></td>
+          <td>Arunachal</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>APK</td>
+          <td><a href="/trains/stations/APK">Aruppukkottai</a></td>
+          <td>Aruppukkottai</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>AFR</td>
+          <td><a href="/trains/stations/AFR">Asafpur</a></td>
+          <td>Asafpur</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>JOB</td>
+          <td><a href="/trains/stations/JOB">Asalpur Jobner</a></td>
+          <td>Asalpur Jobner</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td>ASO</td>
+          <td><a href="/trains/stations/ASO">Asangaon</a></td>
+          <td>Asangaon</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>ASN</td>
+          <td><a href="/trains/stations/ASN">Asansol Junction</a></td>
+          <td>Asansol</td>
+          <td>108</td>
+        </tr>
+        <tr>
+          <td>AST</td>
+          <td><a href="/trains/stations/AST">Asaoti</a></td>
+          <td>Asaoti</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>ASV</td>
+          <td><a href="/trains/stations/ASV">Asarva Junction</a></td>
+          <td>Asarva Junction</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>AQG</td>
+          <td><a href="/trains/stations/AQG">Ashapura Gomat</a></td>
+          <td>Ashapura Gomat</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>ASKN</td>
+          <td><a href="/trains/stations/ASKN">Ashok Nagar</a></td>
+          <td>Ashok Nagar</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>AP</td>
+          <td><a href="/trains/stations/AP">Ashokapuram</a></td>
+          <td>Ashokapuram</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>ASTG</td>
+          <td><a href="/trains/stations/ASTG">Ashtegaon</a></td>
+          <td>Ashtegaon</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>ASAF</td>
+          <td><a href="/trains/stations/ASAF">Asifabad Road</a></td>
+          <td>Asifabad Road</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>ANA</td>
+          <td><a href="/trains/stations/ANA">Aslana</a></td>
+          <td>Aslana</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>ASL</td>
+          <td><a href="/trains/stations/ASL">Aslaoda</a></td>
+          <td>Aslaoda</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>AXK</td>
+          <td><a href="/trains/stations/AXK">Asokhar</a></td>
+          <td>Asokhar</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>AAS</td>
+          <td><a href="/trains/stations/AAS">Asranada</a></td>
+          <td>Asranada</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>ATT</td>
+          <td><a href="/trains/stations/ATT">Atari</a></td>
+          <td>Atari</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>ATE</td>
+          <td><a href="/trains/stations/ATE">Atarra</a></td>
+          <td>Atarra</td>
+          <td>14</td>
+        </tr>
+        <tr>
+          <td>AEL</td>
+          <td><a href="/trains/stations/AEL">Ateli</a></td>
+          <td>Ateli</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>ATL</td>
+          <td><a href="/trains/stations/ATL">Athmal Gola</a></td>
+          <td>Athmal Gola</td>
+          <td>7</td>
+        </tr>
+        <tr>
+          <td>ARP</td>
+          <td><a href="/trains/stations/ARP">Atrampur</a></td>
+          <td>Atrampur</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>ATRU</td>
+          <td><a href="/trains/stations/ATRU">Atru</a></td>
+          <td>Atru</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>ATS</td>
+          <td><a href="/trains/stations/ATS">Attabira</a></td>
+          <td>Attabira</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>ATR</td>
+          <td><a href="/trains/stations/ATR">Attar</a></td>
+          <td>Attar</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>AL</td>
+          <td><a href="/trains/stations/AL">Attili</a></td>
+          <td>Attili</td>
+          <td>11</td>
+        </tr>
+        <tr>
+          <td>AIP</td>
+          <td><a href="/trains/stations/AIP">Attippattu</a></td>
+          <td>Attippattu</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>ATU</td>
+          <td><a href="/trains/stations/ATU">Attur</a></td>
+          <td>Attur</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>ATUL</td>
+          <td><a href="/trains/stations/ATUL">Atul</a></td>
+          <td>Atul</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>AJRE</td>
+          <td><a href="/trains/stations/AJRE">Aujari</a></td>
+          <td>Aujari</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>AED</td>
+          <td><a href="/trains/stations/AED">Aulenda</a></td>
+          <td>Aulenda</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>AUNG</td>
+          <td><a href="/trains/stations/AUNG">Aung</a></td>
+          <td>Aung</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>ARJ</td>
+          <td><a href="/trains/stations/ARJ">Aunrihar Junction</a></td>
+          <td>Aunrihar Junction</td>
+          <td>22</td>
+        </tr>
+        <tr>
+          <td>AWB</td>
+          <td><a href="/trains/stations/AWB">Aurangabad</a></td>
+          <td>Aurangabad</td>
+          <td>20</td>
+        </tr>
+        <tr>
+          <td>OSA</td>
+          <td><a href="/trains/stations/OSA">Ausa Road</a></td>
+          <td>Ausa Road</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>AVS</td>
+          <td><a href="/trains/stations/AVS">Auvaneswsarem</a></td>
+          <td>Auvaneswsarem</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>AUWA</td>
+          <td><a href="/trains/stations/AUWA">Auwa</a></td>
+          <td>Auwa</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>AVD</td>
+          <td><a href="/trains/stations/AVD">Avadi</a></td>
+          <td>Avadi</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>ATPA</td>
+          <td><a href="/trains/stations/ATPA">Awantipura</a></td>
+          <td>Awantipura</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>ATNR</td>
+          <td><a href="/trains/stations/ATNR">Awatarnagar</a></td>
+          <td>Awatarnagar</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>AY</td>
+          <td><a href="/trains/stations/AY">Ayodhya</a></td>
+          <td>Ayodhya</td>
+          <td>28</td>
+        </tr>
+        <tr>
+          <td>APN</td>
+          <td><a href="/trains/stations/APN">Ayodhyapattanam</a></td>
+          <td>Ayodhyapattanam</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>AMH</td>
+          <td><a href="/trains/stations/AMH">Azamgarh</a></td>
+          <td>Azamgarh</td>
+          <td>14</td>
+        </tr>
+        <tr>
+          <td>AZR</td>
+          <td><a href="/trains/stations/AZR">Azamnagar Road</a></td>
+          <td>Azamnagar Road</td>
+          <td>14</td>
+        </tr>
+        <tr>
+          <td>ACLE</td>
+          <td><a href="/trains/stations/ACLE">Azimganj City</a></td>
+          <td>Azimganj City</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>AZ</td>
+          <td><a href="/trains/stations/AZ">Azimganj Junction</a></td>
+          <td>Azimganj Junction</td>
+          <td>11</td>
+        </tr>
+        <tr>
+          <td>BEY</td>
+          <td><a href="/trains/stations/BEY">B Cement Nagar</a></td>
+          <td>B Cement Nagar</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>BTP</td>
+          <td><a href="/trains/stations/BTP">Babatpur</a></td>
+          <td>Babatpur</td>
+          <td>11</td>
+        </tr>
+        <tr>
+          <td>BV</td>
+          <td><a href="/trains/stations/BV">Babhnan</a></td>
+          <td>Babhnan</td>
+          <td>16</td>
+        </tr>
+        <tr>
+          <td>BAB</td>
+          <td><a href="/trains/stations/BAB">Babina</a></td>
+          <td>Babina</td>
+          <td>20</td>
+        </tr>
+        <tr>
+          <td>BBA</td>
+          <td><a href="/trains/stations/BBA">Babrala</a></td>
+          <td>Babrala</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>BBO</td>
+          <td><a href="/trains/stations/BBO">Babugarh</a></td>
+          <td>Babugarh</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BUPH</td>
+          <td><a href="/trains/stations/BUPH">Babupeth</a></td>
+          <td>Babupeth</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>BCHL</td>
+          <td><a href="/trains/stations/BCHL">Bacheli</a></td>
+          <td>Bacheli</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BCN</td>
+          <td><a href="/trains/stations/BCN">Bachhrawan</a></td>
+          <td>Bachhrawan</td>
+          <td>21</td>
+        </tr>
+        <tr>
+          <td>BCA</td>
+          <td><a href="/trains/stations/BCA">Bachwara Junction</a></td>
+          <td>Bachwara Junction</td>
+          <td>14</td>
+        </tr>
+        <tr>
+          <td>BAD</td>
+          <td><a href="/trains/stations/BAD">Bad</a></td>
+          <td>Bad</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BDBA</td>
+          <td><a href="/trains/stations/BDBA">Badabandha</a></td>
+          <td>Badabandha</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BDM</td>
+          <td><a href="/trains/stations/BDM">Badami</a></td>
+          <td>Badami</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BPY</td>
+          <td><a href="/trains/stations/BPY">Badampudi</a></td>
+          <td>Badampudi</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>BPB</td>
+          <td><a href="/trains/stations/BPB">Badarpur Junction</a></td>
+          <td>Badarpur Junction</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>BDWS</td>
+          <td><a href="/trains/stations/BDWS">Badarwas</a></td>
+          <td>Badarwas</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BDXX</td>
+          <td><a href="/trains/stations/BDXX">Bade Arapur</a></td>
+          <td>Bade Arapur</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BDHL</td>
+          <td><a href="/trains/stations/BDHL">Badhal</a></td>
+          <td>Badhal</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>BDWA</td>
+          <td><a href="/trains/stations/BDWA">Badhwa Bara</a></td>
+          <td>Badhwa Bara</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BDZ</td>
+          <td><a href="/trains/stations/BDZ">Badkulla</a></td>
+          <td>Badkulla</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BHB</td>
+          <td><a href="/trains/stations/BHB">Badla Ghat</a></td>
+          <td>Badla Ghat</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BUD</td>
+          <td><a href="/trains/stations/BUD">Badlapur</a></td>
+          <td>Badlapur</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BHD</td>
+          <td><a href="/trains/stations/BHD">Badli</a></td>
+          <td>New Delhi</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>BUDM</td>
+          <td><a href="/trains/stations/BUDM">Badmal</a></td>
+          <td>Badmal</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td>BDU</td>
+          <td><a href="/trains/stations/BDU">Badnapur</a></td>
+          <td>Badnapur</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BD</td>
+          <td><a href="/trains/stations/BD">Badnera Junction</a></td>
+          <td>Badnera Junction</td>
+          <td>46</td>
+        </tr>
+        <tr>
+          <td>BDDR</td>
+          <td><a href="/trains/stations/BDDR">Badodar</a></td>
+          <td>Badodar</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BNZ</td>
+          <td><a href="/trains/stations/BNZ">Badshahnagar</a></td>
+          <td>Badshahnagar</td>
+          <td>24</td>
+        </tr>
+        <tr>
+          <td>BSE</td>
+          <td><a href="/trains/stations/BSE">Badshahpur</a></td>
+          <td>Badshahpur</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>BLPR</td>
+          <td><a href="/trains/stations/BLPR">Badulipar</a></td>
+          <td>Badulipar</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BPG</td>
+          <td><a href="/trains/stations/BPG">Badurpur Ghat</a></td>
+          <td>Badurpur Ghat</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BWS</td>
+          <td><a href="/trains/stations/BWS">Badwasi</a></td>
+          <td>Badwasi</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BUG</td>
+          <td><a href="/trains/stations/BUG">Bagaha</a></td>
+          <td>Bagaha</td>
+          <td>14</td>
+        </tr>
+        <tr>
+          <td>BGHI</td>
+          <td><a href="/trains/stations/BGHI">Bagahai Road</a></td>
+          <td>Bagahai Road</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BGA</td>
+          <td><a href="/trains/stations/BGA">Bagalia</a></td>
+          <td>Bagalia</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BGK</td>
+          <td><a href="/trains/stations/BGK">Bagalkot</a></td>
+          <td>Bagalkot</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BGBR</td>
+          <td><a href="/trains/stations/BGBR">Bagbahra</a></td>
+          <td>Bagbahra</td>
+          <td>13</td>
+        </tr>
+        <tr>
+          <td>BEH</td>
+          <td><a href="/trains/stations/BEH">Bagdihi</a></td>
+          <td>Bagdihi</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>BF</td>
+          <td><a href="/trains/stations/BF">Bagetar</a></td>
+          <td>Bagetar</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BSRX</td>
+          <td><a href="/trains/stations/BSRX">Bagevadi Road</a></td>
+          <td>Bagevadi Road</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BGH</td>
+          <td><a href="/trains/stations/BGH">Baghauli</a></td>
+          <td>Baghauli</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>BORA</td>
+          <td><a href="/trains/stations/BORA">Baghdogra</a></td>
+          <td>Baghdogra</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BGRA</td>
+          <td><a href="/trains/stations/BGRA">Baghnapara</a></td>
+          <td>Baghnapara</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BJQ</td>
+          <td><a href="/trains/stations/BJQ">Baghora</a></td>
+          <td>Baghora</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BGPL</td>
+          <td><a href="/trains/stations/BGPL">Baghuapal</a></td>
+          <td>Baghuapal</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BZN</td>
+          <td><a href="/trains/stations/BZN">Bagnan</a></td>
+          <td>Bagnan</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BGTA</td>
+          <td><a href="/trains/stations/BGTA">Bagra Tawa</a></td>
+          <td>Bagra Tawa</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>BQN</td>
+          <td><a href="/trains/stations/BQN">Bagri Nagar</a></td>
+          <td>Bagri Nagar</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BGX</td>
+          <td><a href="/trains/stations/BGX">Bagri Sajjanpur</a></td>
+          <td>Bagri Sajjanpur</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BGMR</td>
+          <td><a href="/trains/stations/BGMR">Bagumra</a></td>
+          <td>Bagumra</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BAGD</td>
+          <td><a href="/trains/stations/BAGD">Bagwada (Halt)</a></td>
+          <td>Bagwada (Halt)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BWB</td>
+          <td><a href="/trains/stations/BWB">Bagwali</a></td>
+          <td>Bagwali</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BSS</td>
+          <td><a href="/trains/stations/BSS">Bahadur Singh W</a></td>
+          <td>Bahadur Singh W</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BGZ</td>
+          <td><a href="/trains/stations/BGZ">Bahadurgarh</a></td>
+          <td>Bahadurgarh</td>
+          <td>26</td>
+        </tr>
+        <tr>
+          <td>BPD</td>
+          <td><a href="/trains/stations/BPD">Bahadurpur</a></td>
+          <td>Bahadurpur</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BHI</td>
+          <td><a href="/trains/stations/BHI">Baheri</a></td>
+          <td>Baheri</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>BJ</td>
+          <td><a href="/trains/stations/BJ">Bahjoi</a></td>
+          <td>Bahjoi</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BRK</td>
+          <td><a href="/trains/stations/BRK">Bahraich</a></td>
+          <td>Bahraich</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BGUA</td>
+          <td><a href="/trains/stations/BGUA">Baiguda</a></td>
+          <td>Baiguda</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BATL</td>
+          <td><a href="/trains/stations/BATL">Baihatola</a></td>
+          <td>Baihatola</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>BKTH</td>
+          <td><a href="/trains/stations/BKTH">Baikunth</a></td>
+          <td>Baikunth</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BRH</td>
+          <td><a href="/trains/stations/BRH">Baikunthpur Road</a></td>
+          <td>Baikunthpur Road</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BOI</td>
+          <td><a href="/trains/stations/BOI">Bainchi</a></td>
+          <td>Bainchi</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BIH</td>
+          <td><a href="/trains/stations/BIH">Bairagarh</a></td>
+          <td>Bairagarh</td>
+          <td>18</td>
+        </tr>
+        <tr>
+          <td>BGU</td>
+          <td><a href="/trains/stations/BGU">Bairagnia</a></td>
+          <td>Bairagnia</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BALR</td>
+          <td><a href="/trains/stations/BALR">Baitalpur</a></td>
+          <td>Baitalpur</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BTV</td>
+          <td><a href="/trains/stations/BTV">Baitarani Road</a></td>
+          <td>Baitarani Road</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BYPL</td>
+          <td><a href="/trains/stations/BYPL">Baiyyappanahali</a></td>
+          <td>Baiyyappanahali</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BJG</td>
+          <td><a href="/trains/stations/BJG">Bajrangarh</a></td>
+          <td>Bajrangarh</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BJUD</td>
+          <td><a href="/trains/stations/BJUD">Bajud</a></td>
+          <td>Bajud</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BJW</td>
+          <td><a href="/trains/stations/BJW">Bajva</a></td>
+          <td>Bajva</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BQE</td>
+          <td><a href="/trains/stations/BQE">Bakanian Bhaunr</a></td>
+          <td>Bakanian Bhaunr</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BQQ</td>
+          <td><a href="/trains/stations/BQQ">Bakhleta</a></td>
+          <td>Bakhleta</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BKP</td>
+          <td><a href="/trains/stations/BKP">Bakhtiyarpur Junction</a></td>
+          <td>Bakhtiyarpur Junction</td>
+          <td>72</td>
+        </tr>
+        <tr>
+          <td>BKTL</td>
+          <td><a href="/trains/stations/BKTL">Baktal</a></td>
+          <td>Baktal</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BKLE</td>
+          <td><a href="/trains/stations/BKLE">Bakudi</a></td>
+          <td>Bakudi</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BBPM</td>
+          <td><a href="/trains/stations/BBPM">Balabhadrapuram</a></td>
+          <td>Balabhadrapuram</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>BRAM</td>
+          <td><a href="/trains/stations/BRAM">Balabnramapuram</a></td>
+          <td>Balabnramapuram</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BGAE</td>
+          <td><a href="/trains/stations/BGAE">Balagarh</a></td>
+          <td>Balagarh</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BTC</td>
+          <td><a href="/trains/stations/BTC">Balaghat Junction</a></td>
+          <td>Balaghat Junction</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BLM</td>
+          <td><a href="/trains/stations/BLM">Balamu Junction</a></td>
+          <td>Balamu Junction</td>
+          <td>21</td>
+        </tr>
+        <tr>
+          <td>BLGR</td>
+          <td><a href="/trains/stations/BLGR">Balangir</a></td>
+          <td>Balangir</td>
+          <td>20</td>
+        </tr>
+        <tr>
+          <td>BLS</td>
+          <td><a href="/trains/stations/BLS">Balasore</a></td>
+          <td>Balasore</td>
+          <td>65</td>
+        </tr>
+        <tr>
+          <td>BLW</td>
+          <td><a href="/trains/stations/BLW">Balawali</a></td>
+          <td>Balawali</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>BALE</td>
+          <td><a href="/trains/stations/BALE">Bale</a></td>
+          <td>Bale</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BLR</td>
+          <td><a href="/trains/stations/BLR">Balganur</a></td>
+          <td>Balganur</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BPQ</td>
+          <td><a href="/trains/stations/BPQ">Balharshah</a></td>
+          <td>Balharshah</td>
+          <td>78</td>
+        </tr>
+        <tr>
+          <td>BAE</td>
+          <td><a href="/trains/stations/BAE">Baliakheri</a></td>
+          <td>Baliakheri</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>BCK</td>
+          <td><a href="/trains/stations/BCK">Balichak</a></td>
+          <td>Balichak</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BVH</td>
+          <td><a href="/trains/stations/BVH">Ballabgarh</a></td>
+          <td>Ballabgarh</td>
+          <td>26</td>
+        </tr>
+        <tr>
+          <td>BAHI</td>
+          <td><a href="/trains/stations/BAHI">Ballenahalli</a></td>
+          <td>Ballenahalli</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BUI</td>
+          <td><a href="/trains/stations/BUI">Ballia</a></td>
+          <td>Ballia</td>
+          <td>36</td>
+        </tr>
+        <tr>
+          <td>BLY</td>
+          <td><a href="/trains/stations/BLY">Bally</a></td>
+          <td>Bally</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BXA</td>
+          <td><a href="/trains/stations/BXA">Balod</a></td>
+          <td>Balod</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BLT</td>
+          <td><a href="/trains/stations/BLT">Balotra Junction</a></td>
+          <td>Balotra Junction</td>
+          <td>7</td>
+        </tr>
+        <tr>
+          <td>BPRH</td>
+          <td><a href="/trains/stations/BPRH">Balpur Halt</a></td>
+          <td>Balpur Halt</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>BLP</td>
+          <td><a href="/trains/stations/BLP">Balrampur</a></td>
+          <td>Balrampur</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BLSD</td>
+          <td><a href="/trains/stations/BLSD">Balsamand</a></td>
+          <td>Balsamand</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>BALU</td>
+          <td><a href="/trains/stations/BALU">Balugan</a></td>
+          <td>Balugan</td>
+          <td>46</td>
+        </tr>
+        <tr>
+          <td>BLGT</td>
+          <td><a href="/trains/stations/BLGT">Balurghat</a></td>
+          <td>Balurghat</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>BMNL</td>
+          <td><a href="/trains/stations/BMNL">Bamanwali</a></td>
+          <td>Bamanwali</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BMU</td>
+          <td><a href="/trains/stations/BMU">Bamhrauli</a></td>
+          <td>Bamhrauli</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>BMLL</td>
+          <td><a href="/trains/stations/BMLL">Bamla</a></td>
+          <td>Bamla</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BMI</td>
+          <td><a href="/trains/stations/BMI">Bamnia</a></td>
+          <td>Bamnia</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>BMB</td>
+          <td><a href="/trains/stations/BMB">Bamra</a></td>
+          <td>Bamra</td>
+          <td>17</td>
+        </tr>
+        <tr>
+          <td>BYN</td>
+          <td><a href="/trains/stations/BYN">Banahi</a></td>
+          <td>Banahi</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>BPF</td>
+          <td><a href="/trains/stations/BPF">Banapura</a></td>
+          <td>Banapura</td>
+          <td>9</td>
+        </tr>
+        <tr>
+          <td>BNO</td>
+          <td><a href="/trains/stations/BNO">Banar</a></td>
+          <td>Banar</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BNS</td>
+          <td><a href="/trains/stations/BNS">Banas</a></td>
+          <td>Banas</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BAND</td>
+          <td><a href="/trains/stations/BAND">Banaswadi</a></td>
+          <td>Banaswadi</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>BNSA</td>
+          <td><a href="/trains/stations/BNSA">Banbasa</a></td>
+          <td>Banbasa</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>BNDA</td>
+          <td><a href="/trains/stations/BNDA">Banda Junction</a></td>
+          <td>Banda</td>
+          <td>16</td>
+        </tr>
+        <tr>
+          <td>BNU</td>
+          <td><a href="/trains/stations/BNU">Bandakpur</a></td>
+          <td>Bandakpur</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>BDW</td>
+          <td><a href="/trains/stations/BDW">Bandanwara</a></td>
+          <td>Bandanwara</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BXK</td>
+          <td><a href="/trains/stations/BXK">Bandarkhal</a></td>
+          <td>Bandarkhal</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BDC</td>
+          <td><a href="/trains/stations/BDC">Bandel Junction</a></td>
+          <td>Bandel Junction</td>
+          <td>44</td>
+        </tr>
+        <tr>
+          <td>BR</td>
+          <td><a href="/trains/stations/BR">Bandh Bareta</a></td>
+          <td>Bandh Bareta</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BNF</td>
+          <td><a href="/trains/stations/BNF">Bandhua</a></td>
+          <td>Bandhua</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BKI</td>
+          <td><a href="/trains/stations/BKI">Bandikui Junction</a></td>
+          <td>Bandikui Junction</td>
+          <td>26</td>
+        </tr>
+        <tr>
+          <td>BDTS</td>
+          <td><a href="/trains/stations/BDTS">Bandra Terminus</a></td>
+          <td>Mumbai</td>
+          <td>37</td>
+        </tr>
+        <tr>
+          <td>BNC</td>
+          <td><a href="/trains/stations/BNC">Bangalore Cant</a></td>
+          <td>Bangalore</td>
+          <td>49</td>
+        </tr>
+        <tr>
+          <td>SBC</td>
+          <td><a href="/trains/stations/SBC">Bangalore Cy Junction</a></td>
+          <td>Bangalore</td>
+          <td>80</td>
+        </tr>
+        <tr>
+          <td>BNCE</td>
+          <td><a href="/trains/stations/BNCE">Bangalore East</a></td>
+          <td>Bangalore</td>
+          <td>16</td>
+        </tr>
+        <tr>
+          <td>BWY</td>
+          <td><a href="/trains/stations/BWY">Bangarapet</a></td>
+          <td>Bangarapet</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>BWT</td>
+          <td><a href="/trains/stations/BWT">Bangarapet</a></td>
+          <td>Bangarapet</td>
+          <td>42</td>
+        </tr>
+        <tr>
+          <td>BGY</td>
+          <td><a href="/trains/stations/BGY">Bangriposi</a></td>
+          <td>Bangriposi</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BOD</td>
+          <td><a href="/trains/stations/BOD">Bangrod</a></td>
+          <td>Bangrod</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BANI</td>
+          <td><a href="/trains/stations/BANI">Bani</a></td>
+          <td>Bani</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>BNBH</td>
+          <td><a href="/trains/stations/BNBH">Bani Bihar</a></td>
+          <td>Bani Bihar</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BAHL</td>
+          <td><a href="/trains/stations/BAHL">Banihal</a></td>
+          <td>Banihal</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BS</td>
+          <td><a href="/trains/stations/BS">Banisar</a></td>
+          <td>Banisar</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BAKA</td>
+          <td><a href="/trains/stations/BAKA">Banka</a></td>
+          <td>Banka</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BKG</td>
+          <td><a href="/trains/stations/BKG">Banka Ghat</a></td>
+          <td>Banka Ghat</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>BNKR</td>
+          <td><a href="/trains/stations/BNKR">Banka Road Oa</a></td>
+          <td>Banka Road Oa</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BTK</td>
+          <td><a href="/trains/stations/BTK">Bankata</a></td>
+          <td>Bankata</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>BKH</td>
+          <td><a href="/trains/stations/BKH">Bankhedi</a></td>
+          <td>Bankhedi</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>BQA</td>
+          <td><a href="/trains/stations/BQA">Bankura</a></td>
+          <td>Bankura</td>
+          <td>14</td>
+        </tr>
+        <tr>
+          <td>BAO</td>
+          <td><a href="/trains/stations/BAO">Banmor</a></td>
+          <td>Banmor</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>BANO</td>
+          <td><a href="/trains/stations/BANO">Bano</a></td>
+          <td>Bano</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>BPS</td>
+          <td><a href="/trains/stations/BPS">Banpas</a></td>
+          <td>Banpas</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BSAE</td>
+          <td><a href="/trains/stations/BSAE">Bansh Baria</a></td>
+          <td>Bansh Baria</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BSBR</td>
+          <td><a href="/trains/stations/BSBR">Banshlai Bridge</a></td>
+          <td>Banshlai Bridge</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BIQ</td>
+          <td><a href="/trains/stations/BIQ">Bansi Paharpur</a></td>
+          <td>Bansi Paharpur</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BSQP</td>
+          <td><a href="/trains/stations/BSQP">Bansipur</a></td>
+          <td>Bansipur</td>
+          <td>7</td>
+        </tr>
+        <tr>
+          <td>BSKO</td>
+          <td><a href="/trains/stations/BSKO">Banskho</a></td>
+          <td>Banskho</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BSPX</td>
+          <td><a href="/trains/stations/BSPX">Banspani</a></td>
+          <td>Banspani</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BNLW</td>
+          <td><a href="/trains/stations/BNLW">Bansthali Niwai</a></td>
+          <td>Bansthali Niwai</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>BGG</td>
+          <td><a href="/trains/stations/BGG">Banta Rnathgarh</a></td>
+          <td>Banta Rnathgarh</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BLL</td>
+          <td><a href="/trains/stations/BLL">Bantanahal</a></td>
+          <td>Bantanahal</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BNTL</td>
+          <td><a href="/trains/stations/BNTL">Bantawala</a></td>
+          <td>Bantawala</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BTRA</td>
+          <td><a href="/trains/stations/BTRA">Banthra</a></td>
+          <td>Banthra</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BOTI</td>
+          <td><a href="/trains/stations/BOTI">Baori Thikria</a></td>
+          <td>Baori Thikria</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>BAF</td>
+          <td><a href="/trains/stations/BAF">Bap</a></td>
+          <td>Bap</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BPP</td>
+          <td><a href="/trains/stations/BPP">Bapatla</a></td>
+          <td>Bapatla</td>
+          <td>31</td>
+        </tr>
+        <tr>
+          <td>MKI</td>
+          <td><a href="/trains/stations/MKI">Bapudm Motihari</a></td>
+          <td>Bapudm Motihari</td>
+          <td>20</td>
+        </tr>
+        <tr>
+          <td>BMKI</td>
+          <td><a href="/trains/stations/BMKI">Bapudm Motihari</a></td>
+          <td>Bapudm Motihari</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BAR</td>
+          <td><a href="/trains/stations/BAR">Bar</a></td>
+          <td>Bar</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BJMD</td>
+          <td><a href="/trains/stations/BJMD">Bara Jamda</a></td>
+          <td>Bara Jamda</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BRM</td>
+          <td><a href="/trains/stations/BRM">Barabambo</a></td>
+          <td>Barabambo</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BBK</td>
+          <td><a href="/trains/stations/BBK">Barabanki Junction</a></td>
+          <td>Barabanki Junction</td>
+          <td>62</td>
+        </tr>
+        <tr>
+          <td>BBM</td>
+          <td><a href="/trains/stations/BBM">Barabhum</a></td>
+          <td>Barabhum</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>BBN</td>
+          <td><a href="/trains/stations/BBN">Barabil</a></td>
+          <td>Barabil</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BCQ</td>
+          <td><a href="/trains/stations/BCQ">Barachak</a></td>
+          <td>Barachak</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BUA</td>
+          <td><a href="/trains/stations/BUA">Baradwar</a></td>
+          <td>Baradwar</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>BAGL</td>
+          <td><a href="/trains/stations/BAGL">Baragopal</a></td>
+          <td>Baragopal</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>BHLE</td>
+          <td><a href="/trains/stations/BHLE">Barahat</a></td>
+          <td>Barahat</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BRHU</td>
+          <td><a href="/trains/stations/BRHU">Barahu</a></td>
+          <td>Barahu</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BRGM</td>
+          <td><a href="/trains/stations/BRGM">Baraigram Jn</a></td>
+          <td>Baraigram Jn</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BRR</td>
+          <td><a href="/trains/stations/BRR">Barakar</a></td>
+          <td>Barakar</td>
+          <td>15</td>
+        </tr>
+        <tr>
+          <td>BARL</td>
+          <td><a href="/trains/stations/BARL">Baral</a></td>
+          <td>Baral</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BRMT</td>
+          <td><a href="/trains/stations/BRMT">Baramati</a></td>
+          <td>Baramati</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BAZ</td>
+          <td><a href="/trains/stations/BAZ">Baran</a></td>
+          <td>Baran</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BRAG</td>
+          <td><a href="/trains/stations/BRAG">Barang</a></td>
+          <td>Barang</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>RAA</td>
+          <td><a href="/trains/stations/RAA">Barara</a></td>
+          <td>Barara</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>BJU</td>
+          <td><a href="/trains/stations/BJU">Barauni Junction</a></td>
+          <td>Barauni Junction</td>
+          <td>80</td>
+        </tr>
+        <tr>
+          <td>BTU</td>
+          <td><a href="/trains/stations/BTU">Baraut</a></td>
+          <td>Baraut</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BBTR</td>
+          <td><a href="/trains/stations/BBTR">Barbatpur</a></td>
+          <td>Barbatpur</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BCRD</td>
+          <td><a href="/trains/stations/BCRD">Barchi Road</a></td>
+          <td>Barchi Road</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>BWN</td>
+          <td><a href="/trains/stations/BWN">Barddhaman Junction</a></td>
+          <td>Barddhaman Junction</td>
+          <td>96</td>
+        </tr>
+        <tr>
+          <td>BRDH</td>
+          <td><a href="/trains/stations/BRDH">Bardhana Halt</a></td>
+          <td>Bardhana Halt</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BIY</td>
+          <td><a href="/trains/stations/BIY">Bardoli</a></td>
+          <td>Bardoli</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BRY</td>
+          <td><a href="/trains/stations/BRY">Bareilly</a></td>
+          <td>Bareilly</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>BE</td>
+          <td><a href="/trains/stations/BE">Bareilly</a></td>
+          <td>Bareilly</td>
+          <td>96</td>
+        </tr>
+        <tr>
+          <td>BC</td>
+          <td><a href="/trains/stations/BC">Bareilly City</a></td>
+          <td>Bareilly</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>BJD</td>
+          <td><a href="/trains/stations/BJD">Barejadi</a></td>
+          <td>Barejadi</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>BQM</td>
+          <td><a href="/trains/stations/BQM">Barelipur</a></td>
+          <td>Barelipur</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BRZ</td>
+          <td><a href="/trains/stations/BRZ">Bareta</a></td>
+          <td>Bareta</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>BET</td>
+          <td><a href="/trains/stations/BET">Bareth</a></td>
+          <td>Bareth</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BRG</td>
+          <td><a href="/trains/stations/BRG">Bargarh</a></td>
+          <td>Bargarh</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BRGA</td>
+          <td><a href="/trains/stations/BRGA">Bargarh Road</a></td>
+          <td>Bargarh Road</td>
+          <td>20</td>
+        </tr>
+        <tr>
+          <td>BRGW</td>
+          <td><a href="/trains/stations/BRGW">Bargawan</a></td>
+          <td>Bargawan</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BUQ</td>
+          <td><a href="/trains/stations/BUQ">Bargi</a></td>
+          <td>Bargi</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BARH</td>
+          <td><a href="/trains/stations/BARH">Barh</a></td>
+          <td>Barh</td>
+          <td>46</td>
+        </tr>
+        <tr>
+          <td>BRN</td>
+          <td><a href="/trains/stations/BRN">Barhan</a></td>
+          <td>Barhan</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BHW</td>
+          <td><a href="/trains/stations/BHW">Barharwa Junction</a></td>
+          <td>Barharwa Junction</td>
+          <td>18</td>
+        </tr>
+        <tr>
+          <td>BRYA</td>
+          <td><a href="/trains/stations/BRYA">Barhiya</a></td>
+          <td>Barhiya</td>
+          <td>38</td>
+        </tr>
+        <tr>
+          <td>DKGS</td>
+          <td><a href="/trains/stations/DKGS">Barhiya</a></td>
+          <td>Barhiya</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BNY</td>
+          <td><a href="/trains/stations/BNY">Barhni</a></td>
+          <td>Barhni</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BBMN</td>
+          <td><a href="/trains/stations/BBMN">Bari Brahman</a></td>
+          <td>Bari Brahman</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>BUP</td>
+          <td><a href="/trains/stations/BUP">Bariarpur</a></td>
+          <td>Bariarpur</td>
+          <td>28</td>
+        </tr>
+        <tr>
+          <td>BPO</td>
+          <td><a href="/trains/stations/BPO">Baripada</a></td>
+          <td>Baripada</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>BRW</td>
+          <td><a href="/trains/stations/BRW">Bariwala</a></td>
+          <td>Bariwala</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BRKA</td>
+          <td><a href="/trains/stations/BRKA">Barka Kana</a></td>
+          <td>Barka Kana</td>
+          <td>16</td>
+        </tr>
+        <tr>
+          <td>BKA</td>
+          <td><a href="/trains/stations/BKA">Barkhera</a></td>
+          <td>Barkhera</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BSYA</td>
+          <td><a href="/trains/stations/BSYA">Barkisalalya</a></td>
+          <td>Barkisalalya</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BKJ</td>
+          <td><a href="/trains/stations/BKJ">Barkur</a></td>
+          <td>Barkur</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BLAX</td>
+          <td><a href="/trains/stations/BLAX">Barlai</a></td>
+          <td>Barlai</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BME</td>
+          <td><a href="/trains/stations/BME">Barmer</a></td>
+          <td>Barmer</td>
+          <td>7</td>
+        </tr>
+        <tr>
+          <td>BNN</td>
+          <td><a href="/trains/stations/BNN">Barnala</a></td>
+          <td>Barnala</td>
+          <td>11</td>
+        </tr>
+        <tr>
+          <td>BOF</td>
+          <td><a href="/trains/stations/BOF">Barog</a></td>
+          <td>Barog</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>BRPL</td>
+          <td><a href="/trains/stations/BRPL">Barpali</a></td>
+          <td>Barpali</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td>BXP</td>
+          <td><a href="/trains/stations/BXP">Barpathar</a></td>
+          <td>Barpathar</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BPRD</td>
+          <td><a href="/trains/stations/BPRD">Barpeta Road</a></td>
+          <td>Barpeta Road</td>
+          <td>25</td>
+        </tr>
+        <tr>
+          <td>BP</td>
+          <td><a href="/trains/stations/BP">Barrackpore</a></td>
+          <td>Barrackpore</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BJR</td>
+          <td><a href="/trains/stations/BJR">Barrajpur</a></td>
+          <td>Barrajpur</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BYS</td>
+          <td><a href="/trains/stations/BYS">Barsali</a></td>
+          <td>Barsali</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BTW</td>
+          <td><a href="/trains/stations/BTW">Barsi Town</a></td>
+          <td>Barsi Town</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BOE</td>
+          <td><a href="/trains/stations/BOE">Barsoi Junction</a></td>
+          <td>Barsoi Junction</td>
+          <td>44</td>
+        </tr>
+        <tr>
+          <td>BZO</td>
+          <td><a href="/trains/stations/BZO">Barsola</a></td>
+          <td>Barsola</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BBGN</td>
+          <td><a href="/trains/stations/BBGN">Barua Bamungaon</a></td>
+          <td>Barua Bamungaon</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BRUD</td>
+          <td><a href="/trains/stations/BRUD">Barud</a></td>
+          <td>Barud</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>BWR</td>
+          <td><a href="/trains/stations/BWR">Barwa Sagar</a></td>
+          <td>Barwa Sagar</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BRWD</td>
+          <td><a href="/trains/stations/BRWD">Barwadih Junction</a></td>
+          <td>Barwadih Junction</td>
+          <td>15</td>
+        </tr>
+        <tr>
+          <td>BWW</td>
+          <td><a href="/trains/stations/BWW">Barwaha</a></td>
+          <td>Barwaha</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BXC</td>
+          <td><a href="/trains/stations/BXC">Barwala</a></td>
+          <td>Barwala</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BYHA</td>
+          <td><a href="/trains/stations/BYHA">Barya Ram</a></td>
+          <td>Barya Ram</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>BZY</td>
+          <td><a href="/trains/stations/BZY">Basai</a></td>
+          <td>Basai</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>BSPL</td>
+          <td><a href="/trains/stations/BSPL">Basampalle</a></td>
+          <td>Basampalle</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BSTP</td>
+          <td><a href="/trains/stations/BSTP">Basantapur</a></td>
+          <td>Basantapur</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BSX</td>
+          <td><a href="/trains/stations/BSX">Basar</a></td>
+          <td>Basar</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>BSI</td>
+          <td><a href="/trains/stations/BSI">Basbari</a></td>
+          <td>Basbari</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BTG</td>
+          <td><a href="/trains/stations/BTG">Basharatganj</a></td>
+          <td>Basharatganj</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BBQ</td>
+          <td><a href="/trains/stations/BBQ">Basin Bridge Junction</a></td>
+          <td>Basin Bridge Junction</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BMF</td>
+          <td><a href="/trains/stations/BMF">Basmat</a></td>
+          <td>Basmat</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BANE</td>
+          <td><a href="/trains/stations/BANE">Basni</a></td>
+          <td>Basni</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>BAI</td>
+          <td><a href="/trains/stations/BAI">Bassi</a></td>
+          <td>Bassi</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BSPN</td>
+          <td><a href="/trains/stations/BSPN">Bassi Pathanam</a></td>
+          <td>Bassi Pathanam</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>BTS</td>
+          <td><a href="/trains/stations/BTS">Basta</a></td>
+          <td>Basta</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>BST</td>
+          <td><a href="/trains/stations/BST">Basti</a></td>
+          <td>Basti</td>
+          <td>54</td>
+        </tr>
+        <tr>
+          <td>BSGN</td>
+          <td><a href="/trains/stations/BSGN">Basugaon</a></td>
+          <td>Basugaon</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BSKH</td>
+          <td><a href="/trains/stations/BSKH">Basukinath</a></td>
+          <td>Basukinath</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BU</td>
+          <td><a href="/trains/stations/BU">Baswa</a></td>
+          <td>Baswa</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>BAT</td>
+          <td><a href="/trains/stations/BAT">Batala Junction</a></td>
+          <td>Batala Junction</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>BSLE</td>
+          <td><a href="/trains/stations/BSLE">Bataspur</a></td>
+          <td>Bataspur</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BTIC</td>
+          <td><a href="/trains/stations/BTIC">Bathinda Cantt.</a></td>
+          <td>Bathinda Cantt.</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BVA</td>
+          <td><a href="/trains/stations/BVA">Bauria Junction</a></td>
+          <td>Bauria Junction</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BWL</td>
+          <td><a href="/trains/stations/BWL">Bawal</a></td>
+          <td>Bawal</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BWK</td>
+          <td><a href="/trains/stations/BWK">Bawani Khera</a></td>
+          <td>Bawani Khera</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BXN</td>
+          <td><a href="/trains/stations/BXN">Bayana Junction</a></td>
+          <td>Bayana</td>
+          <td>26</td>
+        </tr>
+        <tr>
+          <td>BUT</td>
+          <td><a href="/trains/stations/BUT">Baytu</a></td>
+          <td>Baytu</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>BVM</td>
+          <td><a href="/trains/stations/BVM">Bayyavaram</a></td>
+          <td>Bayyavaram</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BZLE</td>
+          <td><a href="/trains/stations/BZLE">Bazarsau</a></td>
+          <td>Bazarsau</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>BPZ</td>
+          <td><a href="/trains/stations/BPZ">Bazpur</a></td>
+          <td>Bazpur</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BEAS</td>
+          <td><a href="/trains/stations/BEAS">Beas</a></td>
+          <td>Beas</td>
+          <td>54</td>
+        </tr>
+        <tr>
+          <td>BER</td>
+          <td><a href="/trains/stations/BER">Beawar</a></td>
+          <td>Beawar</td>
+          <td>18</td>
+        </tr>
+        <tr>
+          <td>BHWA</td>
+          <td><a href="/trains/stations/BHWA">Bechhiwara</a></td>
+          <td>Bechhiwara</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BMT</td>
+          <td><a href="/trains/stations/BMT">Begampet</a></td>
+          <td>Hyderabad</td>
+          <td>17</td>
+        </tr>
+        <tr>
+          <td>BGW</td>
+          <td><a href="/trains/stations/BGW">Begdewadi</a></td>
+          <td>Begdewadi</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BGS</td>
+          <td><a href="/trains/stations/BGS">Begu Sarai</a></td>
+          <td>Begu Sarai</td>
+          <td>30</td>
+        </tr>
+        <tr>
+          <td>BEG</td>
+          <td><a href="/trains/stations/BEG">Behtagokul</a></td>
+          <td>Behtagokul</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BHLA</td>
+          <td><a href="/trains/stations/BHLA">Behula</a></td>
+          <td>Behula</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BFR</td>
+          <td><a href="/trains/stations/BFR">Bekal Fort</a></td>
+          <td>Bekal Fort</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BELA</td>
+          <td><a href="/trains/stations/BELA">Bela</a></td>
+          <td>Bela</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>BTX</td>
+          <td><a href="/trains/stations/BTX">Bela Tal</a></td>
+          <td>Bela Tal</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>BLK</td>
+          <td><a href="/trains/stations/BLK">Belakoba</a></td>
+          <td>Belakoba</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>BPA</td>
+          <td><a href="/trains/stations/BPA">Belampalli</a></td>
+          <td>Belampalli</td>
+          <td>33</td>
+        </tr>
+        <tr>
+          <td>BAP</td>
+          <td><a href="/trains/stations/BAP">Belapur</a></td>
+          <td>Belapur</td>
+          <td>30</td>
+        </tr>
+        <tr>
+          <td>BLSR</td>
+          <td><a href="/trains/stations/BLSR">Belasar</a></td>
+          <td>Belasar</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BLDA</td>
+          <td><a href="/trains/stations/BLDA">Belda</a></td>
+          <td>Belda</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BEB</td>
+          <td><a href="/trains/stations/BEB">Beldanga</a></td>
+          <td>Beldanga</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BIG</td>
+          <td><a href="/trains/stations/BIG">Belgahna</a></td>
+          <td>Belgahna</td>
+          <td>9</td>
+        </tr>
+        <tr>
+          <td>BGM</td>
+          <td><a href="/trains/stations/BGM">Belgaum</a></td>
+          <td>Belgaum</td>
+          <td>28</td>
+        </tr>
+        <tr>
+          <td>BLH</td>
+          <td><a href="/trains/stations/BLH">Belgharia</a></td>
+          <td>Belgharia</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BYL</td>
+          <td><a href="/trains/stations/BYL">Belha</a></td>
+          <td>Belha</td>
+          <td>11</td>
+        </tr>
+        <tr>
+          <td>BMKD</td>
+          <td><a href="/trains/stations/BMKD">Bellamkonda</a></td>
+          <td>Bellamkonda</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BYC</td>
+          <td><a href="/trains/stations/BYC">Bellary Cant</a></td>
+          <td>Bellary Cant</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BAY</td>
+          <td><a href="/trains/stations/BAY">Bellary Junction</a></td>
+          <td>Bellary</td>
+          <td>13</td>
+        </tr>
+        <tr>
+          <td>BNHL</td>
+          <td><a href="/trains/stations/BNHL">Bellenahalli</a></td>
+          <td>Bellenahalli</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BPH</td>
+          <td><a href="/trains/stations/BPH">Belpahar</a></td>
+          <td>Belpahar</td>
+          <td>7</td>
+        </tr>
+        <tr>
+          <td>BXM</td>
+          <td><a href="/trains/stations/BXM">Belrayan</a></td>
+          <td>Belrayan</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BLSN</td>
+          <td><a href="/trains/stations/BLSN">Belsonda</a></td>
+          <td>Belsonda</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>BLTR</td>
+          <td><a href="/trains/stations/BLTR">Belthara Road</a></td>
+          <td>Belthara Road</td>
+          <td>15</td>
+        </tr>
+        <tr>
+          <td>BWD</td>
+          <td><a href="/trains/stations/BWD">Belvandi</a></td>
+          <td>Belvandi</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>BEHR</td>
+          <td><a href="/trains/stations/BEHR">Beohari</a></td>
+          <td>Beohari</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>BRNA</td>
+          <td><a href="/trains/stations/BRNA">Berawanya</a></td>
+          <td>Berawanya</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BCH</td>
+          <td><a href="/trains/stations/BCH">Berchha</a></td>
+          <td>Berchha</td>
+          <td>18</td>
+        </tr>
+        <tr>
+          <td>BPC</td>
+          <td><a href="/trains/stations/BPC">Berhampore Crt</a></td>
+          <td>Berhampore Crt</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BRMO</td>
+          <td><a href="/trains/stations/BRMO">Bermo</a></td>
+          <td>Bermo</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>BSRL</td>
+          <td><a href="/trains/stations/BSRL">Besroli</a></td>
+          <td>Besroli</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BMH</td>
+          <td><a href="/trains/stations/BMH">Betamcherla</a></td>
+          <td>Betamcherla</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>BEW</td>
+          <td><a href="/trains/stations/BEW">Betavad</a></td>
+          <td>Betavad</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BTPD</td>
+          <td><a href="/trains/stations/BTPD">Bethampurdi</a></td>
+          <td>Bethampurdi</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>BTY</td>
+          <td><a href="/trains/stations/BTY">Bethuadahari</a></td>
+          <td>Bethuadahari</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BTQ</td>
+          <td><a href="/trains/stations/BTQ">Betnoti</a></td>
+          <td>Betnoti</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>BTH</td>
+          <td><a href="/trains/stations/BTH">Bettiah</a></td>
+          <td>Bettiah</td>
+          <td>18</td>
+        </tr>
+        <tr>
+          <td>BZU</td>
+          <td><a href="/trains/stations/BZU">Betul</a></td>
+          <td>Betul</td>
+          <td>64</td>
+        </tr>
+        <tr>
+          <td>BNL</td>
+          <td><a href="/trains/stations/BNL">Bevinahalu</a></td>
+          <td>Bevinahalu</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BAH</td>
+          <td><a href="/trains/stations/BAH">Bhabhar</a></td>
+          <td>Bhabhar</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BFT</td>
+          <td><a href="/trains/stations/BFT">Bhabta</a></td>
+          <td>Bhabta</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BBU</td>
+          <td><a href="/trains/stations/BBU">Bhabua Road</a></td>
+          <td>Bhabua Road</td>
+          <td>35</td>
+        </tr>
+        <tr>
+          <td>BCO</td>
+          <td><a href="/trains/stations/BCO">Bhachau</a></td>
+          <td>Bhachau</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BCOB</td>
+          <td><a href="/trains/stations/BCOB">Bhachau Bg</a></td>
+          <td>Bhachau Bg</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>BDN</td>
+          <td><a href="/trains/stations/BDN">Bhadan</a></td>
+          <td>Bhadan</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BUU</td>
+          <td><a href="/trains/stations/BUU">Bhadanpur</a></td>
+          <td>Bhadanpur</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BWH</td>
+          <td><a href="/trains/stations/BWH">Bhadaura</a></td>
+          <td>Bhadaura</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>BVB</td>
+          <td><a href="/trains/stations/BVB">Bhadbhadaghat</a></td>
+          <td>Bhadbhadaghat</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BBAI</td>
+          <td><a href="/trains/stations/BBAI">Bhadbhunja</a></td>
+          <td>Bhadbhunja</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BDI</td>
+          <td><a href="/trains/stations/BDI">Bhadli</a></td>
+          <td>Bhadli</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BOY</td>
+          <td><a href="/trains/stations/BOY">Bhadohi</a></td>
+          <td>Bhadohi</td>
+          <td>27</td>
+        </tr>
+        <tr>
+          <td>BDCR</td>
+          <td><a href="/trains/stations/BDCR">Bhadrachalam Road</a></td>
+          <td>Bhadrachalam Road</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>BHC</td>
+          <td><a href="/trains/stations/BHC">Bhadrakh</a></td>
+          <td>Bhadrakh</td>
+          <td>59</td>
+        </tr>
+        <tr>
+          <td>BDVT</td>
+          <td><a href="/trains/stations/BDVT">Bhadravati</a></td>
+          <td>Bhadravati</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BHR</td>
+          <td><a href="/trains/stations/BHR">Bhadreshwar</a></td>
+          <td>Bhadreshwar</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BHDR</td>
+          <td><a href="/trains/stations/BHDR">Bhadri</a></td>
+          <td>Bhadri</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>BBY</td>
+          <td><a href="/trains/stations/BBY">Bhadroli</a></td>
+          <td>Bhadroli</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>VAA</td>
+          <td><a href="/trains/stations/VAA">Bhaga Junction</a></td>
+          <td>Bhaga Junction</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BGP</td>
+          <td><a href="/trains/stations/BGP">Bhagalpur</a></td>
+          <td>Bhagalpur</td>
+          <td>36</td>
+        </tr>
+        <tr>
+          <td>ZZZZ</td>
+          <td><a href="/trains/stations/ZZZZ">Bhagalpur</a></td>
+          <td>Bhagalpur</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BGKT</td>
+          <td><a href="/trains/stations/BGKT">Bhagat Ki Kothi</a></td>
+          <td>Bhagat Ki Kothi</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>BQG</td>
+          <td><a href="/trains/stations/BQG">Bhagwangola</a></td>
+          <td>Bhagwangola</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BNR</td>
+          <td><a href="/trains/stations/BNR">Bhagwanpur</a></td>
+          <td>Bhagwanpur</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td>BGPR</td>
+          <td><a href="/trains/stations/BGPR">Bhagwanpura</a></td>
+          <td>Bhagwanpura</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BRU</td>
+          <td><a href="/trains/stations/BRU">Bhairoganj</a></td>
+          <td>Bhairoganj</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BOG</td>
+          <td><a href="/trains/stations/BOG">Bhairongarh</a></td>
+          <td>Bhairongarh</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BKNG</td>
+          <td><a href="/trains/stations/BKNG">Bhakti Nagar</a></td>
+          <td>Bhakti Nagar</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>BHLK</td>
+          <td><a href="/trains/stations/BHLK">Bhalki</a></td>
+          <td>Bhalki</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>BFM</td>
+          <td><a href="/trains/stations/BFM">Bhalui</a></td>
+          <td>Bhalui</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BKRD</td>
+          <td><a href="/trains/stations/BKRD">Bhaluka Road F</a></td>
+          <td>Bhaluka Road F</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>BLMR</td>
+          <td><a href="/trains/stations/BLMR">Bhalukmara</a></td>
+          <td>Bhalukmara</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BUL</td>
+          <td><a href="/trains/stations/BUL">Bhalulata</a></td>
+          <td>Bhalulata</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BLMK</td>
+          <td><a href="/trains/stations/BLMK">Bhalumaska</a></td>
+          <td>Bhalumaska</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BLNI</td>
+          <td><a href="/trains/stations/BLNI">Bhalwani</a></td>
+          <td>Bhalwani</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BAK</td>
+          <td><a href="/trains/stations/BAK">Bhan Kari</a></td>
+          <td>Bhan Kari</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BNP</td>
+          <td><a href="/trains/stations/BNP">Bhanapur</a></td>
+          <td>Bhanapur</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>BUX</td>
+          <td><a href="/trains/stations/BUX">Bhandak</a></td>
+          <td>Bhandak</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>BRD</td>
+          <td><a href="/trains/stations/BRD">Bhandara Road</a></td>
+          <td>Bhandara Road</td>
+          <td>29</td>
+        </tr>
+        <tr>
+          <td>BHME</td>
+          <td><a href="/trains/stations/BHME">Bhandaridah</a></td>
+          <td>Bhandaridah</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>BHU</td>
+          <td><a href="/trains/stations/BHU">Bhandu Motidau</a></td>
+          <td>Bhandu Motidau</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BHNS</td>
+          <td><a href="/trains/stations/BHNS">Bhansi</a></td>
+          <td>Bhansi</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BNVD</td>
+          <td><a href="/trains/stations/BNVD">Bhanvad</a></td>
+          <td>Bhanvad</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BNUD</td>
+          <td><a href="/trains/stations/BNUD">Bhanvad</a></td>
+          <td>Bhanvad</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>BHTK</td>
+          <td><a href="/trains/stations/BHTK">Bhanwar Tonk</a></td>
+          <td>Bhanwar Tonk</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>BNWS</td>
+          <td><a href="/trains/stations/BNWS">Bhanwasa</a></td>
+          <td>Bhanwasa</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BTKP</td>
+          <td><a href="/trains/stations/BTKP">Bharat Kup</a></td>
+          <td>Bharat Kup</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BTE</td>
+          <td><a href="/trains/stations/BTE">Bharatpur Junction</a></td>
+          <td>Bharatpur Junction</td>
+          <td>29</td>
+        </tr>
+        <tr>
+          <td>BHRL</td>
+          <td><a href="/trains/stations/BHRL">Bharoli</a></td>
+          <td>Bharoli</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BNT</td>
+          <td><a href="/trains/stations/BNT">Bharthana</a></td>
+          <td>Bharthana</td>
+          <td>16</td>
+        </tr>
+        <tr>
+          <td>BH</td>
+          <td><a href="/trains/stations/BH">Bharuch Junction</a></td>
+          <td>Bharuch</td>
+          <td>61</td>
+        </tr>
+        <tr>
+          <td>BSZ</td>
+          <td><a href="/trains/stations/BSZ">Bharwa Sumerpur</a></td>
+          <td>Bharwa Sumerpur</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BRE</td>
+          <td><a href="/trains/stations/BRE">Bharwari</a></td>
+          <td>Bharwari</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>BYT</td>
+          <td><a href="/trains/stations/BYT">Bhatapara</a></td>
+          <td>Bhatapara</td>
+          <td>41</td>
+        </tr>
+        <tr>
+          <td>BTI</td>
+          <td><a href="/trains/stations/BTI">Bhatinda Junction</a></td>
+          <td>Bhatinda Junction</td>
+          <td>30</td>
+        </tr>
+        <tr>
+          <td>BTSD</td>
+          <td><a href="/trains/stations/BTSD">Bhatisuda(Halt)</a></td>
+          <td>Bhatisuda(Halt)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BHTA</td>
+          <td><a href="/trains/stations/BHTA">Bhatiya</a></td>
+          <td>Bhatiya</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BTKL</td>
+          <td><a href="/trains/stations/BTKL">Bhatkal</a></td>
+          <td>Bhatkal</td>
+          <td>7</td>
+        </tr>
+        <tr>
+          <td>BTJL</td>
+          <td><a href="/trains/stations/BTJL">Bhatkal</a></td>
+          <td>Bhatkal</td>
+          <td>9</td>
+        </tr>
+        <tr>
+          <td>BTT</td>
+          <td><a href="/trains/stations/BTT">Bhatni Junction</a></td>
+          <td>Bhatni Junction</td>
+          <td>35</td>
+        </tr>
+        <tr>
+          <td>BHG</td>
+          <td><a href="/trains/stations/BHG">Bhaton Ki Gali</a></td>
+          <td>Bhaton Ki Gali</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BHTR</td>
+          <td><a href="/trains/stations/BHTR">Bhatpar Rani</a></td>
+          <td>Bhatpar Rani</td>
+          <td>14</td>
+        </tr>
+        <tr>
+          <td>BQU</td>
+          <td><a href="/trains/stations/BQU">Bhattiprolu</a></td>
+          <td>Bhattiprolu</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BHT</td>
+          <td><a href="/trains/stations/BHT">Bhattu</a></td>
+          <td>Bhattu</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BVP</td>
+          <td><a href="/trains/stations/BVP">Bhavanagar Para</a></td>
+          <td>Bhavanagar Para</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BVNR</td>
+          <td><a href="/trains/stations/BVNR">Bhavani Nagar</a></td>
+          <td>Bhavani Nagar</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>BVC</td>
+          <td><a href="/trains/stations/BVC">Bhavnagar Trmus</a></td>
+          <td>Bhavnagar Trmus</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>BWM</td>
+          <td><a href="/trains/stations/BWM">Bhawani Mandi</a></td>
+          <td>Bhawani Mandi</td>
+          <td>26</td>
+        </tr>
+        <tr>
+          <td>BWIP</td>
+          <td><a href="/trains/stations/BWIP">Bhawanipatna</a></td>
+          <td>Bhawanipatna</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BYR</td>
+          <td><a href="/trains/stations/BYR">Bhayandar</a></td>
+          <td>Bhayandar</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BHY</td>
+          <td><a href="/trains/stations/BHY">Bhayavadar</a></td>
+          <td>Bhayavadar</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BDH</td>
+          <td><a href="/trains/stations/BDH">Bhedia</a></td>
+          <td>Bhedia</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BEP</td>
+          <td><a href="/trains/stations/BEP">Bheerpur</a></td>
+          <td>Bheerpur</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BHJA</td>
+          <td><a href="/trains/stations/BHJA">Bheja</a></td>
+          <td>Bheja</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>BRGT</td>
+          <td><a href="/trains/stations/BRGT">Bheraghat</a></td>
+          <td>Bheraghat</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BFY</td>
+          <td><a href="/trains/stations/BFY">Bhesana</a></td>
+          <td>Bhesana</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BILA</td>
+          <td><a href="/trains/stations/BILA">Bheslana</a></td>
+          <td>Bheslana</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BHET</td>
+          <td><a href="/trains/stations/BHET">Bhestan</a></td>
+          <td>Bhestan</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BGVN</td>
+          <td><a href="/trains/stations/BGVN">Bhigwan</a></td>
+          <td>Bhigwan</td>
+          <td>7</td>
+        </tr>
+        <tr>
+          <td>BKU</td>
+          <td><a href="/trains/stations/BKU">Bhiknur</a></td>
+          <td>Bhiknur</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BLD</td>
+          <td><a href="/trains/stations/BLD">Bhilad</a></td>
+          <td>Bhilad</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BIA</td>
+          <td><a href="/trains/stations/BIA">Bhilai</a></td>
+          <td>Bhilai</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>BPHB</td>
+          <td><a href="/trains/stations/BPHB">Bhilai Pwr Hs</a></td>
+          <td>Bhilai Pwr Hs</td>
+          <td>22</td>
+        </tr>
+        <tr>
+          <td>BQR</td>
+          <td><a href="/trains/stations/BQR">Bhilainagar</a></td>
+          <td>Bhilainagar</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>BVQ</td>
+          <td><a href="/trains/stations/BVQ">Bhilavdi</a></td>
+          <td>Bhilavdi</td>
+          <td>7</td>
+        </tr>
+        <tr>
+          <td>BLDI</td>
+          <td><a href="/trains/stations/BLDI">Bhildi</a></td>
+          <td>Bhildi</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BHL</td>
+          <td><a href="/trains/stations/BHL">Bhilwara</a></td>
+          <td>Bhilwara</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>BMD</td>
+          <td><a href="/trains/stations/BMD">Bhimadolu</a></td>
+          <td>Bhimadolu</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>BIML</td>
+          <td><a href="/trains/stations/BIML">Bhimal</a></td>
+          <td>Bhimal</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BMC</td>
+          <td><a href="/trains/stations/BMC">Bhimalgondi</a></td>
+          <td>Bhimalgondi</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BMN</td>
+          <td><a href="/trains/stations/BMN">Bhimana</a></td>
+          <td>Bhimana</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BMSB</td>
+          <td><a href="/trains/stations/BMSB">Bhimasar Bg</a></td>
+          <td>Bhimasar Bg</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BVRM</td>
+          <td><a href="/trains/stations/BVRM">Bhimavaram Junction</a></td>
+          <td>Bhimavaram Junction</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>BVRT</td>
+          <td><a href="/trains/stations/BVRT">Bhimavaram Town</a></td>
+          <td>Bhimavaram Town</td>
+          <td>14</td>
+        </tr>
+        <tr>
+          <td>BMGA</td>
+          <td><a href="/trains/stations/BMGA">Bhimgara</a></td>
+          <td>Bhimgara</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BMKJ</td>
+          <td><a href="/trains/stations/BMKJ">Bhimkhoj</a></td>
+          <td>Bhimkhoj</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>BZM</td>
+          <td><a href="/trains/stations/BZM">Bhimsen</a></td>
+          <td>Bhimsen</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>BIX</td>
+          <td><a href="/trains/stations/BIX">Bhind</a></td>
+          <td>Bhind</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BWA</td>
+          <td><a href="/trains/stations/BWA">Bhinwaliya</a></td>
+          <td>Bhinwaliya</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BIK</td>
+          <td><a href="/trains/stations/BIK">Bhira Kheri</a></td>
+          <td>Bhira Kheri</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BTO</td>
+          <td><a href="/trains/stations/BTO">Bhitaura</a></td>
+          <td>Bhitaura</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>BHTN</td>
+          <td><a href="/trains/stations/BHTN">Bhitoni</a></td>
+          <td>Bhitoni</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BVS</td>
+          <td><a href="/trains/stations/BVS">Bhivpuri Road</a></td>
+          <td>Bhivpuri Road</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BIRD</td>
+          <td><a href="/trains/stations/BIRD">Bhiwandi Road</a></td>
+          <td>Bhiwandi Road</td>
+          <td>28</td>
+        </tr>
+        <tr>
+          <td>BNW</td>
+          <td><a href="/trains/stations/BNW">Bhiwani</a></td>
+          <td>Bhiwani</td>
+          <td>11</td>
+        </tr>
+        <tr>
+          <td>BNWC</td>
+          <td><a href="/trains/stations/BNWC">Bhiwani City</a></td>
+          <td>Bhiwani City</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BPRS</td>
+          <td><a href="/trains/stations/BPRS">Bhogpur Sirwal</a></td>
+          <td>Bhogpur</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>BPR</td>
+          <td><a href="/trains/stations/BPR">Bhojipura Junction</a></td>
+          <td>Bhojipura Junction</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>BOJ</td>
+          <td><a href="/trains/stations/BOJ">Bhojo</a></td>
+          <td>Bhojo</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>BJE</td>
+          <td><a href="/trains/stations/BJE">Bhojudih Junction</a></td>
+          <td>Bhojudih Junction</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>BOKR</td>
+          <td><a href="/trains/stations/BOKR">Bhokar</a></td>
+          <td>Bhokar</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BOKE</td>
+          <td><a href="/trains/stations/BOKE">Bhoke</a></td>
+          <td>Bhoke</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BHV</td>
+          <td><a href="/trains/stations/BHV">Bhoma</a></td>
+          <td>Bhoma</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BHNE</td>
+          <td><a href="/trains/stations/BHNE">Bhone</a></td>
+          <td>Bhone</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BGQ</td>
+          <td><a href="/trains/stations/BGQ">Bhongaon</a></td>
+          <td>Bhongaon</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BG</td>
+          <td><a href="/trains/stations/BG">Bhongir</a></td>
+          <td>Bhongir</td>
+          <td>17</td>
+        </tr>
+        <tr>
+          <td>BON</td>
+          <td><a href="/trains/stations/BON">Bh Onra</a></td>
+          <td>Bh Onra</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BPL</td>
+          <td><a href="/trains/stations/BPL">Bhopal  Junction</a></td>
+          <td>Bhopal  Junction</td>
+          <td>155</td>
+        </tr>
+        <tr>
+          <td>BFJ</td>
+          <td><a href="/trains/stations/BFJ">Bhoras Budrukh</a></td>
+          <td>Bhoras Budrukh</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>BRTK</td>
+          <td><a href="/trains/stations/BRTK">Bhortex</a></td>
+          <td>Bhortex</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BBS</td>
+          <td><a href="/trains/stations/BBS">Bhubaneswar</a></td>
+          <td>Bhubaneswar</td>
+          <td>98</td>
+        </tr>
+        <tr>
+          <td>BCU</td>
+          <td><a href="/trains/stations/BCU">Bhuchchu</a></td>
+          <td>Bhuchchu</td>
+          <td>11</td>
+        </tr>
+        <tr>
+          <td>BPK</td>
+          <td><a href="/trains/stations/BPK">Bhugaon</a></td>
+          <td>Bhugaon</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>BHUJ</td>
+          <td><a href="/trains/stations/BHUJ">Bhuj</a></td>
+          <td>Bhuj</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>BHLP</td>
+          <td><a href="/trains/stations/BHLP">Bhulanpur</a></td>
+          <td>Bhulanpur</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>BLO</td>
+          <td><a href="/trains/stations/BLO">Bhulon</a></td>
+          <td>Bhulon</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BSJ</td>
+          <td><a href="/trains/stations/BSJ">Bhupalsagar</a></td>
+          <td>Bhupalsagar</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BEF</td>
+          <td><a href="/trains/stations/BEF">Bhupdeopur</a></td>
+          <td>Bhupdeopur</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>VPO</td>
+          <td><a href="/trains/stations/VPO">Bhupia Mau</a></td>
+          <td>Bhupia Mau</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BHKD</td>
+          <td><a href="/trains/stations/BHKD">Bhurkunda</a></td>
+          <td>Bhurkunda</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>BSDP</td>
+          <td><a href="/trains/stations/BSDP">Bhusandpur</a></td>
+          <td>Bhusandpur</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>BSL</td>
+          <td><a href="/trains/stations/BSL">Bhusaval Junction</a></td>
+          <td>Bhusaval Junction</td>
+          <td>137</td>
+        </tr>
+        <tr>
+          <td>BTSR</td>
+          <td><a href="/trains/stations/BTSR">Bhuteshwar</a></td>
+          <td>Bhuteshwar</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BN</td>
+          <td><a href="/trains/stations/BN">Bibinagar</a></td>
+          <td>Bibinagar</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>BIC</td>
+          <td><a href="/trains/stations/BIC">Bichia</a></td>
+          <td>Bichia</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BID</td>
+          <td><a href="/trains/stations/BID">Bidadi</a></td>
+          <td>Bidadi</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>BDNP</td>
+          <td><a href="/trains/stations/BDNP">Bidanpur</a></td>
+          <td>Bidanpur</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BIDR</td>
+          <td><a href="/trains/stations/BIDR">Bidar</a></td>
+          <td>Bidar</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>BNXR</td>
+          <td><a href="/trains/stations/BNXR">Bidhan Nagar</a></td>
+          <td>Bidhan Nagar</td>
+          <td>11</td>
+        </tr>
+        <tr>
+          <td>BIU</td>
+          <td><a href="/trains/stations/BIU">Bidupur</a></td>
+          <td>Bidupur</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>BIGA</td>
+          <td><a href="/trains/stations/BIGA">Bigga</a></td>
+          <td>Bigga</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BQP</td>
+          <td><a href="/trains/stations/BQP">Bighapur</a></td>
+          <td>Bighapur</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BEHS</td>
+          <td><a href="/trains/stations/BEHS">Bihar Sharif</a></td>
+          <td>Bihar Sharif</td>
+          <td>7</td>
+        </tr>
+        <tr>
+          <td>BHZ</td>
+          <td><a href="/trains/stations/BHZ">Bihara</a></td>
+          <td>Bihara</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>BEA</td>
+          <td><a href="/trains/stations/BEA">Bihiya</a></td>
+          <td>Bihiya</td>
+          <td>20</td>
+        </tr>
+        <tr>
+          <td>BTA</td>
+          <td><a href="/trains/stations/BTA">Bihta</a></td>
+          <td>Bihta</td>
+          <td>17</td>
+        </tr>
+        <tr>
+          <td>BJNR</td>
+          <td><a href="/trains/stations/BJNR">Bijainagar</a></td>
+          <td>Bijainagar</td>
+          <td>7</td>
+        </tr>
+        <tr>
+          <td>BJP</td>
+          <td><a href="/trains/stations/BJP">Bijapur</a></td>
+          <td>Bijapur</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BJI</td>
+          <td><a href="/trains/stations/BJI">Bijauli</a></td>
+          <td>Bijauli</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>VST</td>
+          <td><a href="/trains/stations/VST">Bijaysota</a></td>
+          <td>Bijaysota</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BJF</td>
+          <td><a href="/trains/stations/BJF">Bijni</a></td>
+          <td>Bijni</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BJO</td>
+          <td><a href="/trains/stations/BJO">Bijnor</a></td>
+          <td>Bijnor</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>BIJR</td>
+          <td><a href="/trains/stations/BIJR">Bijoor</a></td>
+          <td>Bijoor</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BJK</td>
+          <td><a href="/trains/stations/BJK">Bijora</a></td>
+          <td>Bijora</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BJIH</td>
+          <td><a href="/trains/stations/BJIH">Bijuli Halt</a></td>
+          <td>Bijuli Halt</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BJRI</td>
+          <td><a href="/trains/stations/BJRI">Bijuri</a></td>
+          <td>Bijuri</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>BWSN</td>
+          <td><a href="/trains/stations/BWSN">Bijwasan</a></td>
+          <td>Bijwasan</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>BKN</td>
+          <td><a href="/trains/stations/BKN">Bikaner Junction</a></td>
+          <td>Bikaner Junction</td>
+          <td>27</td>
+        </tr>
+        <tr>
+          <td>BVL</td>
+          <td><a href="/trains/stations/BVL">Bikkavolu</a></td>
+          <td>Bikkavolu</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BKSL</td>
+          <td><a href="/trains/stations/BKSL">Bikram Shila</a></td>
+          <td>Bikram Shila</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BMR</td>
+          <td><a href="/trains/stations/BMR">Bikrampur</a></td>
+          <td>Bikrampur</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BSP</td>
+          <td><a href="/trains/stations/BSP">Bilaspur Junction</a></td>
+          <td>Bilaspur Junction</td>
+          <td>65</td>
+        </tr>
+        <tr>
+          <td>BLQR</td>
+          <td><a href="/trains/stations/BLQR">Bilaspur Road</a></td>
+          <td>Bilaspur Road</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BLOR</td>
+          <td><a href="/trains/stations/BLOR">Bilaspur Road</a></td>
+          <td>Bilaspur Road</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>BILD</td>
+          <td><a href="/trains/stations/BILD">Bildi</a></td>
+          <td>Bildi</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>BZG</td>
+          <td><a href="/trains/stations/BZG">Bilga</a></td>
+          <td>Bilga</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BLG</td>
+          <td><a href="/trains/stations/BLG">Bilhar Ghat</a></td>
+          <td>Bilhar Ghat</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>BLU</td>
+          <td><a href="/trains/stations/BLU">Bilhaur</a></td>
+          <td>Bilhaur</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BIM</td>
+          <td><a href="/trains/stations/BIM">Bilimora Junction</a></td>
+          <td>Bilimora</td>
+          <td>17</td>
+        </tr>
+        <tr>
+          <td>BXLL</td>
+          <td><a href="/trains/stations/BXLL">Billi</a></td>
+          <td>Billi</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BLPU</td>
+          <td><a href="/trains/stations/BLPU">Bilpur</a></td>
+          <td>Bilpur</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>BWI</td>
+          <td><a href="/trains/stations/BWI">Bilwai</a></td>
+          <td>Bilwai</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BINA</td>
+          <td><a href="/trains/stations/BINA">Bina Junction</a></td>
+          <td>Bina Junction</td>
+          <td>103</td>
+        </tr>
+        <tr>
+          <td>VNK</td>
+          <td><a href="/trains/stations/VNK">Binaiki</a></td>
+          <td>Binaiki</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BDYK</td>
+          <td><a href="/trains/stations/BDYK">Bindayaka</a></td>
+          <td>Bindayaka</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BKO</td>
+          <td><a href="/trains/stations/BKO">Bindki Road</a></td>
+          <td>Bindki Road</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>BNV</td>
+          <td><a href="/trains/stations/BNV">Binnaguri</a></td>
+          <td>Binnaguri</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>BIR</td>
+          <td><a href="/trains/stations/BIR">Bir</a></td>
+          <td>Bir</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>BDWL</td>
+          <td><a href="/trains/stations/BDWL">Biradhwal</a></td>
+          <td>Biradhwal</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BAMA</td>
+          <td><a href="/trains/stations/BAMA">Birambad</a></td>
+          <td>Birambad</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BRMD</td>
+          <td><a href="/trains/stations/BRMD">Biramdih</a></td>
+          <td>Biramdih</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BMK</td>
+          <td><a href="/trains/stations/BMK">Birang Khera</a></td>
+          <td>Birang Khera</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BRPT</td>
+          <td><a href="/trains/stations/BRPT">Birapatti</a></td>
+          <td>Birapatti</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BLNR</td>
+          <td><a href="/trains/stations/BLNR">Birlanagar</a></td>
+          <td>Birlanagar</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BIJ</td>
+          <td><a href="/trains/stations/BIJ">Birnagar</a></td>
+          <td>Birnagar</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BEO</td>
+          <td><a href="/trains/stations/BEO">Birohe</a></td>
+          <td>Birohe</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BRLY</td>
+          <td><a href="/trains/stations/BRLY">Biroliya</a></td>
+          <td>Biroliya</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BRS</td>
+          <td><a href="/trains/stations/BRS">Birsinghpur</a></td>
+          <td>Birsinghpur</td>
+          <td>13</td>
+        </tr>
+        <tr>
+          <td>RRB</td>
+          <td><a href="/trains/stations/RRB">Birur Junction</a></td>
+          <td>Birur</td>
+          <td>28</td>
+        </tr>
+        <tr>
+          <td>BIWK</td>
+          <td><a href="/trains/stations/BIWK">Bisalwas Kalan</a></td>
+          <td>Bisalwas Kalan</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BSM</td>
+          <td><a href="/trains/stations/BSM">Bisanattam</a></td>
+          <td>Bisanattam</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BRKH</td>
+          <td><a href="/trains/stations/BRKH">Bisapurkalan</a></td>
+          <td>Bisapurkalan</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BTJ</td>
+          <td><a href="/trains/stations/BTJ">Bishnathganj</a></td>
+          <td>Bishnathganj</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>VSU</td>
+          <td><a href="/trains/stations/VSU">Bishnupur</a></td>
+          <td>Bishnupur</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>BSPR</td>
+          <td><a href="/trains/stations/BSPR">Bishrampur</a></td>
+          <td>Bishrampur</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BZR</td>
+          <td><a href="/trains/stations/BZR">Bisra</a></td>
+          <td>Bisra</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BMCK</td>
+          <td><a href="/trains/stations/BMCK">Bissamcuttack</a></td>
+          <td>Bissamcuttack</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>BUB</td>
+          <td><a href="/trains/stations/BUB">Bissau</a></td>
+          <td>Bissau</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>BGSF</td>
+          <td><a href="/trains/stations/BGSF">Bisugirsharif</a></td>
+          <td>Bisugirsharif</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BVN</td>
+          <td><a href="/trains/stations/BVN">Biswan</a></td>
+          <td>Biswan</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BTTR</td>
+          <td><a href="/trains/stations/BTTR">Bitragunta</a></td>
+          <td>Bitragunta</td>
+          <td>22</td>
+        </tr>
+        <tr>
+          <td>BRRG</td>
+          <td><a href="/trains/stations/BRRG">Biyavra Rajgarh</a></td>
+          <td>Biyavra Rajgarh</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td>BOBS</td>
+          <td><a href="/trains/stations/BOBS">Bobas</a></td>
+          <td>Bobas</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>VBL</td>
+          <td><a href="/trains/stations/VBL">Bobbili</a></td>
+          <td>Bobbili</td>
+          <td>14</td>
+        </tr>
+        <tr>
+          <td>BHBK</td>
+          <td><a href="/trains/stations/BHBK">Bodhadi Bujrug</a></td>
+          <td>Bodhadi Bujrug</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BDWD</td>
+          <td><a href="/trains/stations/BDWD">Bodwad</a></td>
+          <td>Bodwad</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>BHLI</td>
+          <td><a href="/trains/stations/BHLI">Bohali</a></td>
+          <td>Bohali</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BNE</td>
+          <td><a href="/trains/stations/BNE">Bohani</a></td>
+          <td>Bohani</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BONA</td>
+          <td><a href="/trains/stations/BONA">Boinda</a></td>
+          <td>Boinda</td>
+          <td>13</td>
+        </tr>
+        <tr>
+          <td>BOR</td>
+          <td><a href="/trains/stations/BOR">Boisar</a></td>
+          <td>Boisar</td>
+          <td>15</td>
+        </tr>
+        <tr>
+          <td>BXJ</td>
+          <td><a href="/trains/stations/BXJ">Bokajan</a></td>
+          <td>Bokajan</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>BKSC</td>
+          <td><a href="/trains/stations/BKSC">Bokaro Stl City</a></td>
+          <td>Bokaro</td>
+          <td>36</td>
+        </tr>
+        <tr>
+          <td>BKRO</td>
+          <td><a href="/trains/stations/BKRO">Bokaro Thermal</a></td>
+          <td>Bokaro Thermal</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>BLX</td>
+          <td><a href="/trains/stations/BLX">Bolai</a></td>
+          <td>Bolai</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BMO</td>
+          <td><a href="/trains/stations/BMO">Bolarum</a></td>
+          <td>Bolarum</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>BOZ</td>
+          <td><a href="/trains/stations/BOZ">Bolarum Bazar</a></td>
+          <td>Bolarum Bazar</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BLND</td>
+          <td><a href="/trains/stations/BLND">Bolinna Doaba</a></td>
+          <td>Bolinna Doaba</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BHP</td>
+          <td><a href="/trains/stations/BHP">Bolpur S Niktn</a></td>
+          <td>Bolpur S Niktn</td>
+          <td>38</td>
+        </tr>
+        <tr>
+          <td>BLSA</td>
+          <td><a href="/trains/stations/BLSA">Bolsa</a></td>
+          <td>Bolsa</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BOM</td>
+          <td><a href="/trains/stations/BOM">Bomadra</a></td>
+          <td>Bomadra</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BQI</td>
+          <td><a href="/trains/stations/BQI">Bommidi</a></td>
+          <td>Bommidi</td>
+          <td>9</td>
+        </tr>
+        <tr>
+          <td>BKL</td>
+          <td><a href="/trains/stations/BKL">Bona Kalu</a></td>
+          <td>Bona Kalu</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>BNDM</td>
+          <td><a href="/trains/stations/BNDM">Bondamunda</a></td>
+          <td>Bondamunda</td>
+          <td>11</td>
+        </tr>
+        <tr>
+          <td>BNGN</td>
+          <td><a href="/trains/stations/BNGN">Bongaigaon</a></td>
+          <td>Bongaigaon</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>BDAG</td>
+          <td><a href="/trains/stations/BDAG">Bonidanga</a></td>
+          <td>Bonidanga</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BOW</td>
+          <td><a href="/trains/stations/BOW">Borawar</a></td>
+          <td>Borawar</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BXY</td>
+          <td><a href="/trains/stations/BXY">Bordhal</a></td>
+          <td>Bordhal</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>BIO</td>
+          <td><a href="/trains/stations/BIO">Bordi</a></td>
+          <td>Bordi</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BFD</td>
+          <td><a href="/trains/stations/BFD">Borhat</a></td>
+          <td>Borhat</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BRB</td>
+          <td><a href="/trains/stations/BRB">Boribial</a></td>
+          <td>Boribial</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BRND</td>
+          <td><a href="/trains/stations/BRND">Boridand</a></td>
+          <td>Boridand</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>BVI</td>
+          <td><a href="/trains/stations/BVI">Borivali</a></td>
+          <td>Mumbai</td>
+          <td>67</td>
+        </tr>
+        <tr>
+          <td>BOT</td>
+          <td><a href="/trains/stations/BOT">Boroti</a></td>
+          <td>Boroti</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BGHU</td>
+          <td><a href="/trains/stations/BGHU">Borraguhallu</a></td>
+          <td>Borraguhallu</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>BTL</td>
+          <td><a href="/trains/stations/BTL">Bortalao</a></td>
+          <td>Bortalao</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BRVR</td>
+          <td><a href="/trains/stations/BRVR">Borvihir</a></td>
+          <td>Borvihir</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>BTD</td>
+          <td><a href="/trains/stations/BTD">Botad Junction</a></td>
+          <td>Botad Junction</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>XXXX</td>
+          <td><a href="/trains/stations/XXXX">Bpt Station</a></td>
+          <td>Bpt Station</td>
+          <td>136</td>
+        </tr>
+        <tr>
+          <td>BMGM</td>
+          <td><a href="/trains/stations/BMGM">Brahmanagudem</a></td>
+          <td>Brahmanagudem</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>BMPL</td>
+          <td><a href="/trains/stations/BMPL">Brahmanpalli</a></td>
+          <td>Brahmanpalli</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BAM</td>
+          <td><a href="/trains/stations/BAM">Brahmapur</a></td>
+          <td>Brahmapur</td>
+          <td>58</td>
+        </tr>
+        <tr>
+          <td>BRJN</td>
+          <td><a href="/trains/stations/BRJN">Brajrajnagar</a></td>
+          <td>Brajrajnagar</td>
+          <td>14</td>
+        </tr>
+        <tr>
+          <td>BRLA</td>
+          <td><a href="/trains/stations/BRLA">Brayla Chaurasi</a></td>
+          <td>Brayla Chaurasi</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BAL</td>
+          <td><a href="/trains/stations/BAL">Budalur</a></td>
+          <td>Budalur</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>BEM</td>
+          <td><a href="/trains/stations/BEM">Budaun</a></td>
+          <td>Budaun</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>BDY</td>
+          <td><a href="/trains/stations/BDY">Buddireddippati</a></td>
+          <td>Buddireddippati</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BDHY</td>
+          <td><a href="/trains/stations/BDHY">Budhi</a></td>
+          <td>Budhi</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BLZ</td>
+          <td><a href="/trains/stations/BLZ">Budhlada</a></td>
+          <td>Budhlada</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>BNI</td>
+          <td><a href="/trains/stations/BNI">Budni</a></td>
+          <td>Budni</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BDVL</td>
+          <td><a href="/trains/stations/BDVL">Budvel</a></td>
+          <td>Budvel</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BSC</td>
+          <td><a href="/trains/stations/BSC">Bulandshahr</a></td>
+          <td>Bulandshahr</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>BUDI</td>
+          <td><a href="/trains/stations/BUDI">Bundi</a></td>
+          <td>Bundi</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BEK</td>
+          <td><a href="/trains/stations/BEK">Bundki</a></td>
+          <td>Bundki</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>BNDP</td>
+          <td><a href="/trains/stations/BNDP">Buniadpur</a></td>
+          <td>Buniadpur</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>BAU</td>
+          <td><a href="/trains/stations/BAU">Burhanpur</a></td>
+          <td>Burhanpur</td>
+          <td>50</td>
+        </tr>
+        <tr>
+          <td>BUH</td>
+          <td><a href="/trains/stations/BUH">Burhar</a></td>
+          <td>Burhar</td>
+          <td>9</td>
+        </tr>
+        <tr>
+          <td>BUW</td>
+          <td><a href="/trains/stations/BUW">Burhwal</a></td>
+          <td>Burhwal</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td>BURN</td>
+          <td><a href="/trains/stations/BURN">Burnpur</a></td>
+          <td>Burnpur</td>
+          <td>14</td>
+        </tr>
+        <tr>
+          <td>BTR</td>
+          <td><a href="/trains/stations/BTR">Butari</a></td>
+          <td>Butari</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BTBR</td>
+          <td><a href="/trains/stations/BTBR">Buti Bori</a></td>
+          <td>Buti Bori</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BXR</td>
+          <td><a href="/trains/stations/BXR">Buxar</a></td>
+          <td>Buxar</td>
+          <td>62</td>
+        </tr>
+        <tr>
+          <td>BDRL</td>
+          <td><a href="/trains/stations/BDRL">Byadarahalli</a></td>
+          <td>Byadarahalli</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BYD</td>
+          <td><a href="/trains/stations/BYD">Byadgi</a></td>
+          <td>Byadgi</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>BY</td>
+          <td><a href="/trains/stations/BY">Byculla</a></td>
+          <td>Byculla</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BYNR</td>
+          <td><a href="/trains/stations/BYNR">Byndoor</a></td>
+          <td>Byndoor</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>KOP</td>
+          <td><a href="/trains/stations/KOP">C Shahumharaj T</a></td>
+          <td>Kolhapur</td>
+          <td>18</td>
+        </tr>
+        <tr>
+          <td>CNO</td>
+          <td><a href="/trains/stations/CNO">Cancona</a></td>
+          <td>Cancona</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>CLR</td>
+          <td><a href="/trains/stations/CLR">Castle Rock</a></td>
+          <td>Castle Rock</td>
+          <td>11</td>
+        </tr>
+        <tr>
+          <td>CVB</td>
+          <td><a href="/trains/stations/CVB">Cavalry Barrcks</a></td>
+          <td>Cavalry Barrcks</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CHB</td>
+          <td><a href="/trains/stations/CHB">Chabua</a></td>
+          <td>Chabua</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CBK</td>
+          <td><a href="/trains/stations/CBK">Chachaura Bngj</a></td>
+          <td>Chachaura Bngj</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>CHCR</td>
+          <td><a href="/trains/stations/CHCR">Chacher</a></td>
+          <td>Chacher</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CU</td>
+          <td><a href="/trains/stations/CU">Chagallu</a></td>
+          <td>Chagallu</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>CBSA</td>
+          <td><a href="/trains/stations/CBSA">Chaibasa</a></td>
+          <td>Chaibasa</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>CNPR</td>
+          <td><a href="/trains/stations/CNPR">Chainpur</a></td>
+          <td>Chainpur</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>CW</td>
+          <td><a href="/trains/stations/CW">Chainwa</a></td>
+          <td>Chainwa</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>CJW</td>
+          <td><a href="/trains/stations/CJW">Chajawa</a></td>
+          <td>Chajawa</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CJL</td>
+          <td><a href="/trains/stations/CJL">Chajli</a></td>
+          <td>Chajli</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>CKH</td>
+          <td><a href="/trains/stations/CKH">Chakand</a></td>
+          <td>Chakand</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CHBT</td>
+          <td><a href="/trains/stations/CHBT">Chakarbhatha</a></td>
+          <td>Chakarbhatha</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CPL</td>
+          <td><a href="/trains/stations/CPL">Chakarlapalli</a></td>
+          <td>Chakarlapalli</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CKK</td>
+          <td><a href="/trains/stations/CKK">Chakarpur</a></td>
+          <td>Chakarpur</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>CDH</td>
+          <td><a href="/trains/stations/CDH">Chakdaha</a></td>
+          <td>Chakdaha</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CKDL</td>
+          <td><a href="/trains/stations/CKDL">Chakdayala</a></td>
+          <td>Chakdayala</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>CAA</td>
+          <td><a href="/trains/stations/CAA">Chakia</a></td>
+          <td>Chakia</td>
+          <td>16</td>
+        </tr>
+        <tr>
+          <td>CHKB</td>
+          <td><a href="/trains/stations/CHKB">Chakki Bank</a></td>
+          <td>Chakki Bank</td>
+          <td>46</td>
+        </tr>
+        <tr>
+          <td>CKP</td>
+          <td><a href="/trains/stations/CKP">Chakradharpur</a></td>
+          <td>Chakradharpur</td>
+          <td>30</td>
+        </tr>
+        <tr>
+          <td>CAJ</td>
+          <td><a href="/trains/stations/CAJ">Chakraj Mal</a></td>
+          <td>Chakraj Mal</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CKOD</td>
+          <td><a href="/trains/stations/CKOD">Chakrod</a></td>
+          <td>Chakrod</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CKS</td>
+          <td><a href="/trains/stations/CKS">Chaksu</a></td>
+          <td>Chaksu</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CKU</td>
+          <td><a href="/trains/stations/CKU">Chakulia</a></td>
+          <td>Chakulia</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>CKX</td>
+          <td><a href="/trains/stations/CKX">Chakur</a></td>
+          <td>Chakur</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CKI</td>
+          <td><a href="/trains/stations/CKI">Chalakudi</a></td>
+          <td>Chalakudi</td>
+          <td>28</td>
+        </tr>
+        <tr>
+          <td>CMZ</td>
+          <td><a href="/trains/stations/CMZ">Chalama</a></td>
+          <td>Chalama</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CLI</td>
+          <td><a href="/trains/stations/CLI">Chalgeri</a></td>
+          <td>Chalgeri</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CSN</td>
+          <td><a href="/trains/stations/CSN">Chalisgaon Junction</a></td>
+          <td>Chalisgaon</td>
+          <td>34</td>
+        </tr>
+        <tr>
+          <td>CHKE</td>
+          <td><a href="/trains/stations/CHKE">Challakere</a></td>
+          <td>Challakere</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CLD</td>
+          <td><a href="/trains/stations/CLD">Chalsa Junction</a></td>
+          <td>Chalsa Junction</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CHM</td>
+          <td><a href="/trains/stations/CHM">Chalthan</a></td>
+          <td>Chalthan</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CMX</td>
+          <td><a href="/trains/stations/CMX">Chamagram</a></td>
+          <td>Chamagram</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CMNR</td>
+          <td><a href="/trains/stations/CMNR">Chamarajanagar</a></td>
+          <td>Chamarajanagar</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CPH</td>
+          <td><a href="/trains/stations/CPH">Champa</a></td>
+          <td>Champa</td>
+          <td>25</td>
+        </tr>
+        <tr>
+          <td>CPN</td>
+          <td><a href="/trains/stations/CPN">Champaner Road Jn</a></td>
+          <td>Champaner Road Jn</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>CPS</td>
+          <td><a href="/trains/stations/CPS">Chand Siau</a></td>
+          <td>Chand Siau</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>CAF</td>
+          <td><a href="/trains/stations/CAF">Chanda Fort</a></td>
+          <td>Chanda Fort</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>CGR</td>
+          <td><a href="/trains/stations/CGR">Chandan Nagar</a></td>
+          <td>Chandan Nagar</td>
+          <td>7</td>
+        </tr>
+        <tr>
+          <td>CTPE</td>
+          <td><a href="/trains/stations/CTPE">Chandanattop</a></td>
+          <td>Chandanattop</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CNBI</td>
+          <td><a href="/trains/stations/CNBI">Chandari</a></td>
+          <td>Chandari</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CDMR</td>
+          <td><a href="/trains/stations/CDMR">Chandauli Mjhwr</a></td>
+          <td>Chandauli Mjhwr</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>CH</td>
+          <td><a href="/trains/stations/CH">Chandausi Junction</a></td>
+          <td>Chandausi</td>
+          <td>18</td>
+        </tr>
+        <tr>
+          <td>CNL</td>
+          <td><a href="/trains/stations/CNL">Chandawal</a></td>
+          <td>Chandawal</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CNA</td>
+          <td><a href="/trains/stations/CNA">Chanderiya</a></td>
+          <td>Chanderiya</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>CNDM</td>
+          <td><a href="/trains/stations/CNDM">Chandi Mandir</a></td>
+          <td>Chandi Mandir</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>CHD</td>
+          <td><a href="/trains/stations/CHD">Chandia Road</a></td>
+          <td>Chandia Road</td>
+          <td>7</td>
+        </tr>
+        <tr>
+          <td>CDG</td>
+          <td><a href="/trains/stations/CDG">Chandigarh</a></td>
+          <td>Chandigarh</td>
+          <td>23</td>
+        </tr>
+        <tr>
+          <td>CNI</td>
+          <td><a href="/trains/stations/CNI">Chandil Junction</a></td>
+          <td>Chandil Junction</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>CDLD</td>
+          <td><a href="/trains/stations/CDLD">Chandlodiya</a></td>
+          <td>Chandlodiya</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>CLDY</td>
+          <td><a href="/trains/stations/CLDY">Chandlodiya</a></td>
+          <td>Chandlodiya</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>CNK</td>
+          <td><a href="/trains/stations/CNK">Chandok</a></td>
+          <td>Chandok</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>CGI</td>
+          <td><a href="/trains/stations/CGI">Chandragiri</a></td>
+          <td>Chandragiri</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CDGR</td>
+          <td><a href="/trains/stations/CDGR">Chandrakona Road</a></td>
+          <td>Chandrakona Road</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>CNE</td>
+          <td><a href="/trains/stations/CNE">Chandranathpur</a></td>
+          <td>Chandranathpur</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>CD</td>
+          <td><a href="/trains/stations/CD">Chandrapur</a></td>
+          <td>Chandrapur</td>
+          <td>46</td>
+        </tr>
+        <tr>
+          <td>CRP</td>
+          <td><a href="/trains/stations/CRP">Chandrapura</a></td>
+          <td>Chandrapura</td>
+          <td>28</td>
+        </tr>
+        <tr>
+          <td>CND</td>
+          <td><a href="/trains/stations/CND">Chandur</a></td>
+          <td>Chandur</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>CNDB</td>
+          <td><a href="/trains/stations/CNDB">Chandur Bazar</a></td>
+          <td>Chandur Bazar</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CHTI</td>
+          <td><a href="/trains/stations/CHTI">Chaneti</a></td>
+          <td>Chaneti</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CGY</td>
+          <td><a href="/trains/stations/CGY">Changanaseri</a></td>
+          <td>Changanaseri</td>
+          <td>24</td>
+        </tr>
+        <tr>
+          <td>CGLA</td>
+          <td><a href="/trains/stations/CGLA">Changotola</a></td>
+          <td>Changotola</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CGS</td>
+          <td><a href="/trains/stations/CGS">Changsari</a></td>
+          <td>Changsari</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CHNN</td>
+          <td><a href="/trains/stations/CHNN">Channani</a></td>
+          <td>Channani</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CPT</td>
+          <td><a href="/trains/stations/CPT">Channapatna</a></td>
+          <td>Channapatna</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>CAI</td>
+          <td><a href="/trains/stations/CAI">Chanpatia</a></td>
+          <td>Chanpatia</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>CPK</td>
+          <td><a href="/trains/stations/CPK">Chaparmukh Junction</a></td>
+          <td>Chaparmukh Junction</td>
+          <td>14</td>
+        </tr>
+        <tr>
+          <td>CJS</td>
+          <td><a href="/trains/stations/CJS">Charamula Kusum</a></td>
+          <td>Charamula Kusum</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>SMD</td>
+          <td><a href="/trains/stations/SMD">Charanmahadevi</a></td>
+          <td>Charanmahadevi</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CRW</td>
+          <td><a href="/trains/stations/CRW">Charaud</a></td>
+          <td>Charaud</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>CBT</td>
+          <td><a href="/trains/stations/CBT">Charbatia</a></td>
+          <td>Charbatia</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>CRN</td>
+          <td><a href="/trains/stations/CRN">Charegaon</a></td>
+          <td>Charegaon</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CGE</td>
+          <td><a href="/trains/stations/CGE">Charghat Pipari</a></td>
+          <td>Charghat Pipari</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CRK</td>
+          <td><a href="/trains/stations/CRK">Charkhera</a></td>
+          <td>Charkhera</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>CKD</td>
+          <td><a href="/trains/stations/CKD">Charkhi Dadri</a></td>
+          <td>Dadri</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>CHZ</td>
+          <td><a href="/trains/stations/CHZ">Charlapalli</a></td>
+          <td>Charlapalli</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>CHV</td>
+          <td><a href="/trains/stations/CHV">Charvattur</a></td>
+          <td>Charvattur</td>
+          <td>16</td>
+        </tr>
+        <tr>
+          <td>CHJ</td>
+          <td><a href="/trains/stations/CHJ">Chata</a></td>
+          <td>Chata</td>
+          <td>9</td>
+        </tr>
+        <tr>
+          <td>CTR</td>
+          <td><a href="/trains/stations/CTR">Chatra</a></td>
+          <td>Chatra</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>CHPT</td>
+          <td><a href="/trains/stations/CHPT">Chatrappatti</a></td>
+          <td>Chatrappatti</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CAP</td>
+          <td><a href="/trains/stations/CAP">Chatrapur</a></td>
+          <td>Chatrapur</td>
+          <td>20</td>
+        </tr>
+        <tr>
+          <td>CTS</td>
+          <td><a href="/trains/stations/CTS">Chattriput</a></td>
+          <td>Chattriput</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>CMU</td>
+          <td><a href="/trains/stations/CMU">Chau Mahla</a></td>
+          <td>Chau Mahla</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td>CBH</td>
+          <td><a href="/trains/stations/CBH">Chaube</a></td>
+          <td>Chaube</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CHOK</td>
+          <td><a href="/trains/stations/CHOK">Chauk</a></td>
+          <td>Chauk</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CHH</td>
+          <td><a href="/trains/stations/CHH">Chaukhandi</a></td>
+          <td>Chaukhandi</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>CNH</td>
+          <td><a href="/trains/stations/CNH">Chaunrah</a></td>
+          <td>Chaunrah</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>CUX</td>
+          <td><a href="/trains/stations/CUX">Chaura</a></td>
+          <td>Chaura</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>CC</td>
+          <td><a href="/trains/stations/CC">Chauri Chaura</a></td>
+          <td>Chauri Chaura</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td>CSA</td>
+          <td><a href="/trains/stations/CSA">Chausa</a></td>
+          <td>Chausa</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>CROA</td>
+          <td><a href="/trains/stations/CROA">Chautara</a></td>
+          <td>Chautara</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CKB</td>
+          <td><a href="/trains/stations/CKB">Chauth Ka Brwra</a></td>
+          <td>Chauth Ka Brwra</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>CVJ</td>
+          <td><a href="/trains/stations/CVJ">Chavaj</a></td>
+          <td>Chavaj</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CHLK</td>
+          <td><a href="/trains/stations/CHLK">Chavalkhede</a></td>
+          <td>Chavalkhede</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CHA</td>
+          <td><a href="/trains/stations/CHA">Chawapall</a></td>
+          <td>Chawapall</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>CEL</td>
+          <td><a href="/trains/stations/CEL">Chebrol</a></td>
+          <td>Chebrol</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>CEM</td>
+          <td><a href="/trains/stations/CEM">Cheekateegalplm</a></td>
+          <td>Cheekateegalplm</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CGL</td>
+          <td><a href="/trains/stations/CGL">Chengalpattu</a></td>
+          <td>Chengalpattu</td>
+          <td>40</td>
+        </tr>
+        <tr>
+          <td>CNGR</td>
+          <td><a href="/trains/stations/CNGR">Chengannur</a></td>
+          <td>Chengannur</td>
+          <td>40</td>
+        </tr>
+        <tr>
+          <td>MSB</td>
+          <td><a href="/trains/stations/MSB">Chennai Beach</a></td>
+          <td>Chennai</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>MAS</td>
+          <td><a href="/trains/stations/MAS">Chennai Central</a></td>
+          <td>Chennai</td>
+          <td>125</td>
+        </tr>
+        <tr>
+          <td>MS</td>
+          <td><a href="/trains/stations/MS">Chennai Egmore</a></td>
+          <td>Chennai</td>
+          <td>44</td>
+        </tr>
+        <tr>
+          <td>CSDR</td>
+          <td><a href="/trains/stations/CSDR">Chennasandra</a></td>
+          <td>Chennasandra</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>COI</td>
+          <td><a href="/trains/stations/COI">Cheoki</a></td>
+          <td>Cheoki</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CYN</td>
+          <td><a href="/trains/stations/CYN">Cheriyanad</a></td>
+          <td>Cheriyanad</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CQA</td>
+          <td><a href="/trains/stations/CQA">Cherukara</a></td>
+          <td>Cherukara</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CTND</td>
+          <td><a href="/trains/stations/CTND">Chettinad</a></td>
+          <td>Chettinad</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CAG</td>
+          <td><a href="/trains/stations/CAG">Chhabra Gugor</a></td>
+          <td>Chhabra Gugor</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>CHNR</td>
+          <td><a href="/trains/stations/CHNR">Chhan Arorian</a></td>
+          <td>Chhan Arorian</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CDRL</td>
+          <td><a href="/trains/stations/CDRL">Chhandrauli</a></td>
+          <td>Chhandrauli</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>CAER</td>
+          <td><a href="/trains/stations/CAER">Chhanera</a></td>
+          <td>Chhanera</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>CHP</td>
+          <td><a href="/trains/stations/CHP">Chhapi</a></td>
+          <td>Chhapi</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>CPR</td>
+          <td><a href="/trains/stations/CPR">Chhapra</a></td>
+          <td>Chhapra</td>
+          <td>76</td>
+        </tr>
+        <tr>
+          <td>CI</td>
+          <td><a href="/trains/stations/CI">Chhapra Kacheri</a></td>
+          <td>Chhapra Kacheri</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>CE</td>
+          <td><a href="/trains/stations/CE">Chharodi</a></td>
+          <td>Chharodi</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>CHRA</td>
+          <td><a href="/trains/stations/CHRA">Chharra</a></td>
+          <td>Chharra</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CJN</td>
+          <td><a href="/trains/stations/CJN">Chhatna</a></td>
+          <td>Chhatna</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>CHN</td>
+          <td><a href="/trains/stations/CHN">Chhina</a></td>
+          <td>Chhina</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>CWA</td>
+          <td><a href="/trains/stations/CWA">Chhindwara Junction</a></td>
+          <td>Chhindwara Junction</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CPDR</td>
+          <td><a href="/trains/stations/CPDR">Chhipadohar</a></td>
+          <td>Chhipadohar</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>COD</td>
+          <td><a href="/trains/stations/COD">Chhota Gudha</a></td>
+          <td>Chhota Gudha</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>COO</td>
+          <td><a href="/trains/stations/COO">Chhoti Odai</a></td>
+          <td>Chhoti Odai</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CLF</td>
+          <td><a href="/trains/stations/CLF">Chhulha</a></td>
+          <td>Chhulha</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>CCK</td>
+          <td><a href="/trains/stations/CCK">Chichaki</a></td>
+          <td>Chichaki</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>CDM</td>
+          <td><a href="/trains/stations/CDM">Chidambaram</a></td>
+          <td>Chidambaram</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CCA</td>
+          <td><a href="/trains/stations/CCA">Chigicherla</a></td>
+          <td>Chigicherla</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CEU</td>
+          <td><a href="/trains/stations/CEU">Chiheru</a></td>
+          <td>Chiheru</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>BAW</td>
+          <td><a href="/trains/stations/BAW">Chik Banavar</a></td>
+          <td>Chik Banavar</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CTH</td>
+          <td><a href="/trains/stations/CTH">Chikalthan</a></td>
+          <td>Chikalthan</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CKHS</td>
+          <td><a href="/trains/stations/CKHS">Chikhli</a></td>
+          <td>Chikhli</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>JRU</td>
+          <td><a href="/trains/stations/JRU">Chikjajur Junction</a></td>
+          <td>Chikjajur Junction</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>CKNI</td>
+          <td><a href="/trains/stations/CKNI">Chikni Road</a></td>
+          <td>Chikni Road</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>CKR</td>
+          <td><a href="/trains/stations/CKR">Chikodi Road</a></td>
+          <td>Chikodi Road</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>CLU</td>
+          <td><a href="/trains/stations/CLU">Chilakalapudi</a></td>
+          <td>Chilakalapudi</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>CIL</td>
+          <td><a href="/trains/stations/CIL">Chilbila Junction</a></td>
+          <td>Chilbila Junction</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>CLDR</td>
+          <td><a href="/trains/stations/CLDR">Chilikidara</a></td>
+          <td>Chilikidara</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CLKA</td>
+          <td><a href="/trains/stations/CLKA">Chilka</a></td>
+          <td>Chilka</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>CHR</td>
+          <td><a href="/trains/stations/CHR">Chilkahar</a></td>
+          <td>Chilkahar</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>CLO</td>
+          <td><a href="/trains/stations/CLO">Chilo</a></td>
+          <td>Chilo</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CLVR</td>
+          <td><a href="/trains/stations/CLVR">Chiluvur</a></td>
+          <td>Chiluvur</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>CMW</td>
+          <td><a href="/trains/stations/CMW">Chima Pahad</a></td>
+          <td>Chima Pahad</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>CMDP</td>
+          <td><a href="/trains/stations/CMDP">Chimidipalli</a></td>
+          <td>Chimidipalli</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>CNC</td>
+          <td><a href="/trains/stations/CNC">Chinchli</a></td>
+          <td>Chinchli</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>CPD</td>
+          <td><a href="/trains/stations/CPD">Chinchpada</a></td>
+          <td>Chinchpada</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CCH</td>
+          <td><a href="/trains/stations/CCH">Chinchvad</a></td>
+          <td>Pune</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>CJM</td>
+          <td><a href="/trains/stations/CJM">Chinna Ganjam</a></td>
+          <td>Chinna Ganjam</td>
+          <td>13</td>
+        </tr>
+        <tr>
+          <td>CHSM</td>
+          <td><a href="/trains/stations/CHSM">Chinna Salem</a></td>
+          <td>Chinna Salem</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CIV</td>
+          <td><a href="/trains/stations/CIV">Chinnaravuru</a></td>
+          <td>Chinnaravuru</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CPLE</td>
+          <td><a href="/trains/stations/CPLE">Chinpai</a></td>
+          <td>Chinpai</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CNN</td>
+          <td><a href="/trains/stations/CNN">Chintaman Ganes</a></td>
+          <td>Chintaman Ganes</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CHI</td>
+          <td><a href="/trains/stations/CHI">Chiplun</a></td>
+          <td>Chiplun</td>
+          <td>15</td>
+        </tr>
+        <tr>
+          <td>CPP</td>
+          <td><a href="/trains/stations/CPP">Chipurupalle</a></td>
+          <td>Chipurupalle</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>CLX</td>
+          <td><a href="/trains/stations/CLX">Chirala</a></td>
+          <td>Chirala</td>
+          <td>56</td>
+        </tr>
+        <tr>
+          <td>CRWA</td>
+          <td><a href="/trains/stations/CRWA">Chirawa</a></td>
+          <td>Chirawa</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>CRY</td>
+          <td><a href="/trains/stations/CRY">Chirayinkil</a></td>
+          <td>Chirayinkil</td>
+          <td>14</td>
+        </tr>
+        <tr>
+          <td>CGN</td>
+          <td><a href="/trains/stations/CGN">Chirgaon</a></td>
+          <td>Chirgaon</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>CHRM</td>
+          <td><a href="/trains/stations/CHRM">Chirmiri</a></td>
+          <td>Chirmiri</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>CBN</td>
+          <td><a href="/trains/stations/CBN">Chit Baragaon</a></td>
+          <td>Chit Baragaon</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>CTHR</td>
+          <td><a href="/trains/stations/CTHR">Chitahra</a></td>
+          <td>Chitahra</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>CIT</td>
+          <td><a href="/trains/stations/CIT">Chitali</a></td>
+          <td>Chitali</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>CTF</td>
+          <td><a href="/trains/stations/CTF">Chitgidda</a></td>
+          <td>Chitgidda</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CTA</td>
+          <td><a href="/trains/stations/CTA">Chitradurg</a></td>
+          <td>Chitradurg</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CKTD</td>
+          <td><a href="/trains/stations/CKTD">Chitrakot</a></td>
+          <td>Chitrakot</td>
+          <td>16</td>
+        </tr>
+        <tr>
+          <td>CTT</td>
+          <td><a href="/trains/stations/CTT">Chitrasani</a></td>
+          <td>Chitrasani</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>COE</td>
+          <td><a href="/trains/stations/COE">Chitrod</a></td>
+          <td>Chitrod</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CT</td>
+          <td><a href="/trains/stations/CT">Chittapur</a></td>
+          <td>Chittapur</td>
+          <td>9</td>
+        </tr>
+        <tr>
+          <td>CRJ</td>
+          <td><a href="/trains/stations/CRJ">Chittaranjan</a></td>
+          <td>Chittaranjan</td>
+          <td>56</td>
+        </tr>
+        <tr>
+          <td>COR</td>
+          <td><a href="/trains/stations/COR">Chittaurgarh</a></td>
+          <td>Chittaurgarh</td>
+          <td>17</td>
+        </tr>
+        <tr>
+          <td>CTO</td>
+          <td><a href="/trains/stations/CTO">Chittor</a></td>
+          <td>Chittor</td>
+          <td>11</td>
+        </tr>
+        <tr>
+          <td>CTYL</td>
+          <td><a href="/trains/stations/CTYL">Chityala</a></td>
+          <td>Chityala</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>CDL</td>
+          <td><a href="/trains/stations/CDL">Chodiala</a></td>
+          <td>Chodiala</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>CHL</td>
+          <td><a href="/trains/stations/CHL">Chola</a></td>
+          <td>Chola</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>COM</td>
+          <td><a href="/trains/stations/COM">Chomun Samod</a></td>
+          <td>Chomun Samod</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>CPU</td>
+          <td><a href="/trains/stations/CPU">Chopan</a></td>
+          <td>Chopan</td>
+          <td>18</td>
+        </tr>
+        <tr>
+          <td>CRL</td>
+          <td><a href="/trains/stations/CRL">Choral</a></td>
+          <td>Choral</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CRE</td>
+          <td><a href="/trains/stations/CRE">Chorghatpiparia</a></td>
+          <td>Chorghatpiparia</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CHRG</td>
+          <td><a href="/trains/stations/CHRG">Chorgi</a></td>
+          <td>Chorgi</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CVR</td>
+          <td><a href="/trains/stations/CVR">Chorvad Road</a></td>
+          <td>Chorvad Road</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>CTKT</td>
+          <td><a href="/trains/stations/CTKT">Choti Khatu</a></td>
+          <td>Choti Khatu</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>CUE</td>
+          <td><a href="/trains/stations/CUE">Choupale</a></td>
+          <td>Choupale</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CNS</td>
+          <td><a href="/trains/stations/CNS">Chuchura</a></td>
+          <td>Chuchura</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>CRU</td>
+          <td><a href="/trains/stations/CRU">Chudawa</a></td>
+          <td>Chudawa</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CAR</td>
+          <td><a href="/trains/stations/CAR">Chunar</a></td>
+          <td>Chunar</td>
+          <td>38</td>
+        </tr>
+        <tr>
+          <td>CBZ</td>
+          <td><a href="/trains/stations/CBZ">Churaibari</a></td>
+          <td>Churaibari</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CUK</td>
+          <td><a href="/trains/stations/CUK">Churk</a></td>
+          <td>Churk</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>CUR</td>
+          <td><a href="/trains/stations/CUR">Churu</a></td>
+          <td>Churu</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>CMA</td>
+          <td><a href="/trains/stations/CMA">Cinnamara</a></td>
+          <td>Cinnamara</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CBJ</td>
+          <td><a href="/trains/stations/CBJ">Clutterbuckganj</a></td>
+          <td>Clutterbuckganj</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>CBE</td>
+          <td><a href="/trains/stations/CBE">Coimbatore Junction</a></td>
+          <td>Coimbatore</td>
+          <td>73</td>
+        </tr>
+        <tr>
+          <td>CBF</td>
+          <td><a href="/trains/stations/CBF">Coimbatore Nrth</a></td>
+          <td>Coimbatore</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>CLJ</td>
+          <td><a href="/trains/stations/CLJ">Colonelganj</a></td>
+          <td>Colonelganj</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td>CNT</td>
+          <td><a href="/trains/stations/CNT">Contai Road</a></td>
+          <td>Contai Road</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>ONR</td>
+          <td><a href="/trains/stations/ONR">Coonoor</a></td>
+          <td>Coonoor</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>CSZ</td>
+          <td><a href="/trains/stations/CSZ">Cossimbazar</a></td>
+          <td>Cossimbazar</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CUPJ</td>
+          <td><a href="/trains/stations/CUPJ">Cuddalore Port</a></td>
+          <td>Cuddalore Port</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>HX</td>
+          <td><a href="/trains/stations/HX">Cuddapah</a></td>
+          <td>Cuddapah</td>
+          <td>21</td>
+        </tr>
+        <tr>
+          <td>CBM</td>
+          <td><a href="/trains/stations/CBM">Cumbum</a></td>
+          <td>Cumbum</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>CTC</td>
+          <td><a href="/trains/stations/CTC">Cuttack</a></td>
+          <td>Cuttack</td>
+          <td>66</td>
+        </tr>
+        <tr>
+          <td>DBR</td>
+          <td><a href="/trains/stations/DBR">Dabhaura</a></td>
+          <td>Dabhaura</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td>DBO</td>
+          <td><a href="/trains/stations/DBO">Dabhoda</a></td>
+          <td>Dabhoda</td>
+          <td></td>
+        </tr>
+    </tbody>
+    </table>
+ </div>
+  <!---part3 end-->
+  <!---part4 start-->
+  <div class="row bg-light">
+    <div class="col-sm-12 col-md-12 col-lg-12 bg-white w-75 m-auto mb-4 mt-4">
+      <h4>Why do you Need a Railway Station List?</h4>
+      <p>As millions of commuters use the Railway Enquiry System daily, getting timely information can be challenging, often leading to long wait times. The Indian Railway Stations List allows you to swiftly find answers to your questions without the need for assistance.
+
+      </p>
+      <p>There’s an extensive network of railway stations in India. In such a scenario, identifying the specific trains serving a particular station can be challenging. However, with a station list, you can effortlessly select trains that pass through your desired station.</p>
+      <p>When you are booking a train ticket online, it's essential to know the railway station codes for both your departure point and destination. You can conveniently access all railway station codes within the station list.</p>
+    </div>
+  </div>
+  <!--part4 end-->
+  <!--part5 start-->
+  <div class="row bg-light">
+    <div class="col-sm-12 col-md-12 col-lg-12 bg-white m-auto mb-4 mt-4  w-75">
+      <h4>Train station code Index</h4>
+  <p>Check out the station codes for the top 10 busiest railway stations of India:</p>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        
+        <th scope="col">Station Name</th>
+        <th scope="col">City</th>
+        <th scope="col">Station Code</th>
+      </tr>
+    </thead>
+    <tbody class="table-group-divider">
+      <tr>
+        
+        <td>Howrah Junction Railway Station	</td>
+        <td>Kolkata	</td>
+        <td>HWH</td>
+      </tr>
+      <tr>
+        
+        <td>New Delhi Railway Station	</td>
+        <td>New Delhi</td>
+        <td>NDLS</td>
+      </tr>
+      <tr>
+        
+        <td >Chhatrapati Shivaji Terminus	</td>
+        <td>MUMBAI</td>
+
+        <td>CTM</td>
+
+        
+
+      </tr>
+      <tr>
+        
+        <td >Kanpur Central Railway Station	</td>
+        <td>Kanpur</td>
+
+        <td>CNB</td>
+
+        
+
+      </tr>
+      <tr>
+        
+        <td >Patna Railway Station		</td>	
+        <td>Patna</td>
+
+        <td>PNBE</td>
+
+        
+
+      </tr>
+      <tr>
+        
+        <td >Vijayawada Railway Station	</td>
+        <td>Vijayawada</td>
+
+        <td>BZA</td>
+
+        
+
+      </tr>
+      <tr>
+        
+        <td >Kalyan Junction Railway Station	</td>
+        <td>Mumbai</td>
+
+        <td>KYN</td>
+
+        
+
+      </tr>
+    </tbody>
+  </table>
+
+    </div>
+  </div>
+
+  {% endif %}
+  <!---part5 end-->
+  
+<!---part6 start-->
+<div class="row bg-light">
+<ul class="col-sm-12 col-md-12 col-lg-12 mb-4 mt-4 m-auto w-75 bg-white ">
+<h4>Frequently Asked Questions (FAQs)
+</h4>
+<h5>Q. How is the ‘Railway Station Directory List’ useful for me? When can I use it?</h5>
+<p>A: The ‘Railway Station Directory List’ comes in handy when you are traveling to smaller stations, as it provides important details like train names, station codes, and information on trains passing through, helping you plan your journey more effectively.
+</p>
+<h5>Q. Does the railway station list include the station code?
+</h5>
+<p>A: Yes, the station code is the first entry on the railway stations list, accompanied by the corresponding train station names.
+</p>
+<h5>Q. How can I find the names of the trains that pass through/start/are destined to a particular station?
+</h5>
+<P>A: The station list provided by ixigo simplifies all travel-related issues. Simply click on the station name of your choice, and you</P>
+<h5>Q. Is it possible to find a train's route from the station list?
+</h5>
+<p>A: Certainly! On the station list, you'll find the names of all trains that either start, pass through, or end at a specific station. You can access the train's route by clicking on its name.</p>
+<h5>Q. What are the benefits of a station list?
+</h5>
+<ul>You can conveniently verify the trains that originate from a specific station</ul>
+<ul>You can get an idea of the trains heading to a particular station</ul>
+<ul>You can get the details of all the train stations that a train passes through.</ul>
+<ul> you can find the train number of the trains starting/passing through a particular station.</ul>
+</div>
+</div>
+<!--part6 end-->
+
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+RailConnect | Upcoming Journeys
+{% endblock  %}
+{% block content %}
+<style>
+    body {
+        background-color: #f8f9fa;
+    }
+    .ticket-card {
+        margin-top: 50px;
+        padding: 20px;
+    }
+    .ticket-image {
+        max-width: 100px;
+        max-height: 100px;
+        border-radius: 8px;
+        object-fit: cover;
+    }
+    .ticket-details {
+        flex: 1;
+        padding-left: 15px;
+    }
+    .ticket-date {
+        white-space: nowrap;
+        text-align: right;
+    }
+</style>
+<div class="container ">
+    <div class="row justify-content-center m-4">
+        <div class="col-md-8">
+            
+            {% for ticket in tickets %}
+            <div class="card ticket-card">
+                <div class="d-flex align-items-center">
+                    <img src="https://roshankashmir.net/wp-content/uploads/2023/02/Japanese-cherry-Blossom.jpg" alt="Ticket Image" class="ticket-image">
+                    <div class="ticket-details">
+                        
+                        <b class="mb-0"> {{ticket.train_number}}</b>
+                        
+                        <p class="mb-0"><b>From:</b> {{ticket.station_from}}</p>
+                        <p class="mb-0"><b>To:</b> {{ticket.station_to}}</p>
+                        <p class="mb-0"><b>PNR:</b> {{ticket.pnr}}</p>
+                        <p class="mb-0"><b>Name of Passenger:</b> {{ticket.name}}</p>
+                    </div>
+                    <div class="ticket-date">
+                        <p class="mb-0"><b>Date of Journey: </b>{{ticket.date}}</p>
+                    </div>
+                   
+                </div>
+                <form action="{% url 'delete_ticket' ticket.pnr %}" method="post">
+                    {% csrf_token %}
+                    <input type="submit" class="btn btn-outline-danger"value="Delete Ticket" >
+                </form>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

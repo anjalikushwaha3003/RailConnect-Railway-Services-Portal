@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+Seat Availability in Train | Indian Railways Reservation Inquiry
+{% endblock %}
+{% block content %}
+<style>
+  select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #fff;
+    color: #333;
+    appearance: none; /* Remove default arrow icon on select */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+option {
+    background-color: #fff;
+    color: #333;
+}
+</style>
+
+<div class="section1 ms-1 mb-5">
+
+    <h2 class="text-center text-white fw-bold">Check Seat Availability</h2>
+    <div class="row sectiona1 m-0 m-auto">
+        <div class="col-sm-12 col-lg-12 col-md-12 col-12">
+            <form method="POST">
+                {% csrf_token %}
+                <input type="text" class="form-control mt-3" id="from_station" name="from_station" placeholder="Enter From Station">
+                <input type="text" class="form-control mt-3" id="to_station" name="to_station" placeholder="Enter To Station">
+                <input type="text" class="form-control mt-3" id="train_number" name="train_number" placeholder="Enter Train Number">
+                <input type="text" class="form-control mt-3" id="date" name="date" placeholder="Enter Date (dd-mm-yyyy)">
+                <label for="trainClass">Choose a Class:</label>
+        <select id="trainClass" name="trainClass">
+            <option value="SL">Sleeper Class (SL)</option>
+            <option value="3A">Third AC (3A)</option>
+            <option value="3E">Three Tier Economy (3E)</option>
+            <option value="2A">Second AC (2A)</option>
+            <option value="1A">First AC (1A)</option>
+        </select>
+                <button type="submit" class="btn btn-primary mt-3">Check Availability</button>
+            </form>
+        </div>
+    </div>
+
+    <hr/>
+
+</div>
+
+<!-- Display Seat Availability Information -->
+{% if availability_data %}
+<div class="container mt-4">
+    <h3 class="text-center">Seat Availability Information</h3>
+    <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Current Status</th>
+              <th>Ticket Fare</th>
+              <th>Confirm Probability</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for entry in availability_data.data %}
+            <tr>
+              <td>{{ entry.date }}</td>
+              <td>{{ entry.current_status }}</td>
+              <td>{{ entry.ticket_fare }}</td>
+              <td>{{ entry.confirm_probability }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+</div>
+{% endif %}
+<!-- Your informational content and FAQ section -->
+<div class="col-sm-12 col-lg-12 col-md-12 col-12 w-75 text-start m-0 m-auto">
+  <h4>Train Seat Availability</h4>
+  <p>Whenever it’s travel time, everyone seems to go in an overdrive for finding out train seat availability. 
+      Well, it’s hardly surprising considering the fact that the majority of the population still prefers to travel by train and Indian Railways 
+      throws open its ticket booking service as much as four months before the date of journey. So, to beat the crowds, it’s best
+      to book your ticket as early as possible. However, booking tickets in advance is a good option only if you are sure about your travel plans.
+      For many travellers, this is often not the case. In such a scenario, it’s a big hassle to wade through large crowds at ticket reservation counters, 
+      just for the sake of tracking the status of train enquiry seat availability.</p>
+
+  <h4>How to Check Train Seat Availability</h4>
+  <p>Step 1: Enter the source and destination cities.
+      Step 2: Enter your journey date or select from the calendar.
+      Step 3: Click on “Search Trains”.
+      Step 4: You will land on the page where all the trains running between the source and destination station are listed, along with the seat availability.
+      Step 5: Click on the specific class of tickets, and you will land a page where the seat availability of the specific class for a week is displayed, along with 
+      the fares.</p>
+</div>
+<div class="row bg-light.bg-gradient">
+  <div class="col-sm-12 col-md-12 col-lg-12 col-12 w-75 text-start m-0 m-auto mb-4">
+      <h4>Train Seat Availability FAQ</h4>
+      <p>Q) How can I check my seat number on the train?</p>
+      <p>A: To check information about your seat on the train, you must check the PNR status. This includes the booking status that shows whether your train ticket is confirmed, or it is on the waiting list (WL) or is it under reservation against cancellation (RAC)</p>
+      <p>Q) What does current seat availability mean?</p>
+      <p>A: Current seat availability is one of the fastest ways to find out the latest booking information and check the availability of seats in real-time. This can be done by entering the From & To Station Name/Code along with travel dates and travel class to know the current Train Seat Availability.</p>
+      <p>Q) What are the chances of my ticket getting confirmed?</p>
+      <p>A: With the new feature of waitlist prediction by Railyatri, one can predict the chances of a waitlisted or RAC ticket getting confirmed. This is based on the latest booking trends.</p>
+  </div>
+</div>
+
+{% endblock %}

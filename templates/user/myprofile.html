@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+My Profile
+{% endblock %}
+{% block content %}
+
+<div class="container-fluid " style="background-color: whitesmoke !important; ">
+    <div class="row px-2" style="background-color: #0D6EFD;  height: 250px;">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            {% if request.session.user %}
+            <h1 style="margin-top:60px;font-weight: 600;font-size: x-large;color: white;">{{request.session.username}}</h1>
+            <a href="/user/viewprofile" class="text-white float-start">VIEW PROFILE ></button>
+            <a href="/user/viewprofile" class="text-decoration-none float-end"><img src='/{{request.session.userpic}}' style="max-height:120px;width:120px; border-radius:50%;" class="img-fluid"></a>
+            {% else %}
+            <a class="nav-link " href="/user/login">
+              <img src="{%static 'images\login\default-user-profile-picture_hvoncb.png'%}" style="max-height:120px; border-radius:50%;"
+                class="img-fluid" />
+            </a>
+            {% endif %}
+            </div>
+    </div>
+    <div class="row" style="background-color: white;">
+        <ul class="list-group list-group-flush">
+            <a href="/user/privacy" class="list-group-item"><i class="fa-solid fa-shield-halved"
+                    style="color: #0D6EFD;"></i>&nbsp;&nbsp;Privacy Policy</a>
+            <a href="/user/terms" class="list-group-item"><i class="fa-solid fa-book-open-reader"
+                    style="color: #0D6EFD;"></i>&nbsp;&nbsp;Terms Of Use</a>
+            <a href="/user/contact"class="list-group-item"><i class="fa-solid fa-square-phone"
+                    style="color: #0D6EFD;"></i>&nbsp;&nbsp;Customer Service</a>
+            <a href="/user/signout/"class="list-group-item"><i class="fa-solid fa-arrow-right-from-bracket"
+                    style="color: #0D6EFD;"></i>&nbsp;&nbsp;Log Out</a>
+        </ul>
+    </div>
+    <div class="row" style="background-color: white; height:100px;"></div>
+</div>
+{% endblock %}

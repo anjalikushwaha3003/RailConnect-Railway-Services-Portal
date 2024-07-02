@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block title %}Trains Between Stations{% endblock %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="card bg-dark text-white mt-4">
+        <div class="card-body">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/" style="text-decoration: none;">Home</a></li>
+              <li class="breadcrumb-item">Train Between Stations</li>
+            </ol>
+          </nav>
+
+          <h2 class="text-center mb-4">Check Trains Between Stations</h2>
+
+          <form class="row g-3 input-box text-center m-auto" method="post">
+            {% csrf_token %}
+            <div class="col-md-6">
+              <input type="text" class="form-control" id="fromStation" name="fromStation" placeholder="From Station">
+            </div>
+            <div class="col-md-6">
+              <input type="text" class="form-control" id="toStation" name="toStation" placeholder="To Station">
+            </div>
+            <div class="col-md-12">
+              <label for="departureDate" class="form-label text-white">Departure Date </label>
+              <input type="text" class="form-control" id="departureDate" name="departureDate" placeholder="DD/MM/YYYY">
+            </div>
+            <div class="col-md-12">
+              <button type="submit" class="btn btn-primary btn-block">Search Trains</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Additional information section -->
+  <div class="row justify-content-center mt-4">
+    <div class="col-md-10">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title">The complete guide to Railway Trains between Stations</h2>
+          <p class="card-text">
+            <!-- Add your content here -->
+            <h4>Trains Between Stations FAQ</h4>
+            <!-- Your FAQ content -->
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Sign Up   
+{% endblock  %}
+
+{% block content %}
+<style>
+    .cre{
+        background-image: url("{%static 'images/login/ir_signup.jpg'%}");
+        background-repeat: no-repeat;
+        background-size: cover !important;
+        
+      }
+      input{
+        box-shadow: none !important;
+        
+      }
+</style>
+<div class="row cre ps-5">
+<div class="col-sm-12 " style="min-height:60px"><div class="text-center fs-1 text-white text-decoration-underline">Sign<b style="color:rgb(31,136,218)">Up</b></div></div>
+  <div class="col-sm-12 me-2 my-5">
+    <div class="col-sm-7 p-5 float-end text-white fw-bold" style="background-image:linear-gradient(rgba(31,150,200,0.5) ,rgba(255, 255, 255, 0.6));border-radius: 5%; box-shadow: 0px 0px 10px 0px black, 0px 0px 10px 0px white inset; background-size: cover;">
+      <form enctype="multipart/form-data"  method="post">
+        {% csrf_token %}
+        <label for="name">Name</label>
+        <input type="text" name="name" placeholder="Name" id="name" required class="form-control">
+        <label for="email">Email</label>
+        <input type="email" name="email" placeholder="Email" id="email" required class="form-control">
+        <label for="tel">Mobile</label>
+        <input type="mobile" name="mobile" placeholder="Mobile" id="mobile" required class="form-control">
+        
+        <label for="password">Password</label>
+        <input type="password" name="password" placeholder="Password" id="password" required class="form-control">
+        
+        <label for="profile">Profile Picture</label>
+        <input type="file" name="profile" placeholder="Profile Picture" id="profile" required class="form-control">
+        <label for="address">Address</label><br>
+        <textarea name="address"  placeholder="Address" id="address" style="resize: none;" cols="85" class="form-control" rows="2"></textarea><br>
+        <input type="submit" value="Save" class="btn btn-outline-dark text-bg-white mb-4">
+        
+      </form>
+    </div>
+    <div class="col-sm-5"></div>
+  </div>
+</div>
+{% endblock  %}

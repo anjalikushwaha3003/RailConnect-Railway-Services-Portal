@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Login In
+{% endblock %}
+
+{% block content %}
+<style>
+    .log {
+        background-image: url("{% static 'images/login/ir.jpg' %}");
+        background-repeat: no-repeat;
+        background-size: cover !important;
+        height: 50vw;
+    }
+
+    @media (max-width: 768px) {
+        /* Adjustments for smaller screens */
+        .log {
+            height: 100vw; /* Set height for mobile devices */
+        }
+
+        .text-center {
+            font-size: 2rem; /* Increase font size for mobile */
+        }
+
+        .p-0 {
+            padding: 0 !important; /* Remove padding for mobile layout */
+        }
+
+        .ms-5 {
+            margin-left: 0 !important; /* Reset left margin for mobile */
+        }
+
+        .float-start {
+            float: none !important; /* Reset float for mobile */
+            margin: auto; /* Center the form */
+        }
+
+        .p-5 {
+            padding: 2rem !important; /* Increase padding for mobile */
+        }
+    }
+</style>
+
+<div class="row log">
+    <div class="col-sm-12" style="min-height: 40px;">
+        <div class="text-center fs-1">Sign <b style="color:rgb(31,136,218)">In</b></div>
+    </div>
+
+    <div class="col-sm-10 p-0 pb-5 mx-1">
+        <div class="col-lg-6 ms-5 float-start p-5" style="background-image: linear-gradient(rgba(31,136, 218, 0.5), rgba(255,255,255,0.6)); border-radius: 5%; box-shadow: 0px 0px 10px 0px black, 0px 0px 10px 0px white inset; background-size: cover;">
+            <form method="post">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="email" class="form-label text-white fw-bold">Email address</label>
+                    <input type="email" class="form-control fw-bold" style="box-shadow:none !important;" autocomplete="off" name="email" id="email" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text text-white fw-bold">We'll never share your details with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label text-white fw-bold">Password</label>
+                    <input type="password" class="form-control fw-bold" style="box-shadow:none !important;" autocomplete="off" name="password" id="password">
+                </div>
+                <a href="" class="form-text text-black m" style="text-decoration:none !important;"><i class="fa-solid fa-lock"></i> Forgot Password ?</a><br>
+                <button type="submit" class="btn btn-outline-dark text-bg-black mt-2 fw-bold">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

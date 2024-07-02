@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Feedback | RailConnect
+    {% endblock  %}
+{% block content %}
+<style>
+    .con {
+        background-image: url("{%static 'images/feedback.jpg'%}");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .coninp {
+        border: none !important;
+        box-shadow: none !important;
+        font-size: 15px !important;
+        background: #E0E0E0 !important;
+        color: #4F4F4F !important;
+      }
+  
+      .coninp:hover {
+        border-top: 1px solid black !important;
+        background: #E0E0E0 !important;
+  
+      }
+  #fd{
+    background: rgba(255, 255, 255, 0.5);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);
+backdrop-filter: blur(17.4px);
+-webkit-backdrop-filter: blur(17.4px);
+border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+</style>
+<div class="row con" >
+    <div class="col-sm-12 " style="min-height:900px"><div class="text-center text-decoration-underline fw-bold fst-italic text-white fs-1">Feedback</div>
+    <div class="col-sm-4  p-4" style="float:left; min-height: 200px;margin-top:10%; box-sizing:border-box; background:transparent">
+    
+    <h2  style="color: #0D6EFD">Please Give Us Your Valueable<b> Feedback 😊</b></h2>
+    </div>
+    <div class="col-sm-4  p-4" id="fd" style="float:right; min-height: 530px;margin-top:10%; box-sizing:border-box;">
+            <form action="" class="form-control input-group-lg" style="background:transparent !important;border:none !important;"  method="post">
+                {% csrf_token %}
+                <div class="col-lg-10 mt-2 w-100 " name="query" id="query" class="coninp w-100 input-group-lg  form-control-lg">
+                How was Your Experience?
+                <div class="form-check mr-3">
+                  <input class="form-check-input" type="radio" name="rating" id="rating_bad" value="bad">
+                  <label class="form-check-label" for="rating_bad">
+                    Bad
+                  </label>
+                  </div>
+                  
+                  <div class="form-check mr-3">
+                  <input class="form-check-input" type="radio" name="rating" id="rating_good" value="good">
+                  <label class="form-check-label" for="rating_good">
+                    Good
+                  </label>
+                  </div>
+                  
+                  <div class="form-check mr-3">
+                  <input class="form-check-input"  type="radio" name="rating" id="rating_excellent" value="excellent">
+                  <label class="form-check-label" for="rating_excellent">
+                    Excellent!
+                  </label>
+                  </div>                       
+            </div>
+            <div class="col-lg-10 mt-2 w-100 ">
+                <input type="text" name="name" placeholder="name*" id="name" class="input-group-lg coninp form-control-lg w-100">
+            </div>
+            <div class="col-lg-10 mt-2 w-100">
+                <input type="email" name="email" placeholder="email*" id="email" class="input-group-lg coninp form-control-lg w-100">
+            </div>
+            <div class="col-lg-10 mt-2 w-100">
+                <input type="tel" name="mobile" placeholder="Phone*" id="mobile" class="input-group-lg coninp form-control-lg w-100">
+            </div>
+            <div class="col-lg-10 mt-2 w-100">
+                <textarea name="message" placeholder="Message*" id="message" style="resize:none !important; height:200px;"  class="input-group-lg coninp form-control-lg w-100"></textarea>
+            </div>
+            <input type="submit" class="btn btn-dark text-white w-100"  value="Submit">
+            </form>
+        
+    </div>
+</div>
+    </div>
+
+{% endblock  %}

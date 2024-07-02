@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+Live Train Running Status | RailConnect
+{% endblock %}
+
+{% block content %}
+<style>
+    body {
+        background-image: url("{%static 'images/bgbook.jpg'%}");
+    }
+    .container {
+        margin-top: 10% !important;
+        margin-bottom: 10% !important;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 60%;
+        max-width: 600px;
+        box-sizing: border-box;
+    }
+    .container:hover {
+        background-color: whitesmoke;
+    }
+    h1 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 30px;
+    }
+    form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    label {
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #333;
+    }
+    input[type="text"] {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    button {
+        width: 100%;
+        padding: 12px;
+        background-color: #7300ff;
+        border: none;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    button:hover {
+        background-color: blue ;
+    }
+    #statusResults {
+        margin-top: 30px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    #statusResults h2 {
+        color: #333;
+        margin-bottom: 10px;
+    }
+    #statusResults p {
+        color: #666;
+        margin-bottom: 5px;
+    }
+</style>
+
+<div class="container">
+    <h1>Live Train Status</h1>
+    <form method="post" id="trainStatusForm" action="{% url 'livestatus' %}">
+        {% csrf_token %}
+        <label for="trainNumber">Enter Train Number:</label>
+        <input type="text" id="trainNumber" name="trainNumber" placeholder="Enter train number..." required>
+        <label for="day">Enter Day:</label>
+        <input type="text" id="day" name="day" placeholder="Enter day..." required>
+        <button type="submit">Get Status</button>
+    </form>
+
+    <!-- Display train status results here -->
+    {% if train_name %}
+
+    <div class="train-info">
+    <p><strong>Train Name:</strong> {{ train_name }}</p>
+    <p><strong>Source Station:</strong> {{ source_station }}</p>
+    <p><strong>Destination Station:</strong> {{ destination_station }}</p>
+    
+    <p><strong>Delayed By: </strong> {{ delay }} Minutes</p>
+    <p><strong>Scheduled Departure Time:</strong> {{ std }}</p>
+    
+    <p><strong>Estimated Arival Time:</strong> {{ eta }}</p>
+    <p><strong>Estimated Departure Time:</strong> {{ etd}}</p>
+    <p><strong>Current Station:</strong> {{ current_station_name }}</p>
+    <small><b>Updated: </b>{{status_as_of}}</small>
+
+    </div>
+
+{% endif %}
+
+</div>
+{% endblock %}

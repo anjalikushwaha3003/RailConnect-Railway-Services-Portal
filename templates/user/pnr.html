@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+PNR Status Live Enquiry | RailConnect
+{% endblock  %}
+{% block content %}
+<div class="row" style="background-color:#7300ff;">
+    <div class="col-lg-6 col-md-6 col-sm-12" >
+        <h3 class="text-white text-center p-3">PNR Status Check</h3>
+        <form method="post" class="p-3 d-flex justify-content-center" id="pnr-form">
+            {% csrf_token %}
+            <div class="input-group mb-3"> 
+                <input type="text" name="pnr_number" id="pnr_number" class="form-control" style="border-radius:0% !important; box-shadow:none;" placeholder="Enter PNR Number" aria-label="Enter PNR Number" aria-describedby="button-addon2">
+                <button class="btn btn-dark z-0" type="submit" style="border-radius:0% !important; box-shadow:none; border:none;" id="button-addon2">Check</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+        <h2>PNR Status</h2>
+    {% if pnr_data %}
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Train No</th>
+            <th scope="col">Train Name</th>
+            <th scope="col">Boarding Date</th>
+            <th scope="col">Boarding Station </th>
+            <th scope="col">From </th>
+            <th scope="col">To </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{ pnr_data.data.trainInfo.trainNo }}</td>
+            <td>{{ pnr_data.data.trainInfo.name }}</td>
+            <td>{{ pnr_data.data.trainInfo.dt }}</td>
+            <td>{{ pnr_data.data.trainInfo.boarding }}</td>
+            <td>{{ pnr_data.data.boardingInfo.stationName }}</td>
+            <td>{{ pnr_data.data.destinationInfo.stationName }}</td>
+          </tr>
+        </tbody>
+        </table>
+        <table class="table">
+            <thead>
+                <th scope="col">S.No</th>
+                <th scope="col">Seat</th>
+
+            </thead>
+            <tbody>
+                {% for passenger in pnr_data.data.passengerInfo %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>  <!-- Use forloop.counter for serial number -->
+                    <td>{{ passenger.currentCoach }}/{{ passenger.currentBerthNo }}</td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="3">No passenger information available</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        
+      </table>
+      {% elif error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+<div class="row mx-4">
+    <div class="col-lg-12">
+        <h3>How to Check IRCTC PNR Status</h3>
+        <p>Following are the different ways to check the PNR status:</p>
+        <ol>
+            <li>
+                <h4>Check PNR status on the RailConnect website</h4>
+                <p>Go to the trains page of the RailConnect website and select 'PNR Status Enquiry'. In the designated field, enter your 10-digit IRCTC PNR number and click on the 'Search' button. Your IRCTC PNR status will be checked immediately, and you will be able to view whether your ticket is confirmed (CNF), placed on the RAC list, or on the waiting list (WL).</p>
+            </li>
+            
+            <li>
+                <h4>Check PNR status using the SMS service</h4>
+                <p>A convenient method for the PNR check with Indian Railways is by using their SMS service. Simply send your PNR number via SMS to 139, and you will receive a prompt response regarding your IRCTC PNR status.</p>
+            </li>
+            <li>
+                <h4>Check through the railway enquiry number (Call 139)</h4>
+                <p>You can complete the PNR status check for railway tickets by calling the railway enquiry number, 139. When you call, select the 'PNR Enquiry' option on the Interactive Voice Response (IVR) system to inquire about your railway PNR status.</p>
+            </li>
+            <li>
+                <h4>Check the final reservation charts</h4>
+                <p>Opt to check PNR status 10-digit by referring to the final reservation chart displayed at the railway station. However, for this, you need to wait until a few hours before the train's departure, which may not be practical in some situations.</p>
+            </li>
+            <li>
+                <h4>Visit Railway Enquiry counters at the railway station</h4>
+                <p>You can also check PNR status by visiting the railway station enquiry counters in person.</p>
+            </li>
+            <li>
+                <h4>Check PNR status through IRCTC website</h4>
+                <p>Visit the IRCTC website and click on the 'PNR Status' tab. Select 'PNR Enquiry' and enter your 10-digit PNR. Press the 'Submit' button and you'll get the desired information.</p>
+            </li>
+        </ol>
+        <h2>PNR Status Enquiry On Mobile App</h2>
+        <p>Trusted by millions of Indians, PNR check on the RailConnect trains mobile app is Easy & Real-Time. Use the PNR Status Live Check Mobile feature and get notified as soon as your waitlisted train ticket status gets confirmed. We will provide the current PNR status 10 digit check for railway tickets along with passenger and train details - Your reservation booking status, platform number, coach position, and more. On RailConnect, you can also check PNR Status in Hindi (पीएनआर स्टेटस पूछताछ).</p>
+        <p>The IRCTC train ticket booking system provides CNF (Confirmed) and RAC (Reservation Against Cancellation) status when tickets are available, and the bookings made after that are provided waitlisted status. Waitlisted tickets get confirmed in order only if any of the CNF/RAC tickets gets cancelled.</p>
+    </div>
+</div>
+{% endblock %}

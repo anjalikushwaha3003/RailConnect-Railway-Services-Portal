@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+View Profile
+{% endblock %}
+{% block content %}
+
+    <!--Main Starts-->
+    
+    <div class="container-fluid " style="background-color: whitesmoke !important; ">
+      <div class="row " style="background-color: #0D6EFD;  height: 5vw;">
+          <div class="col-lg-12 col-sm-12 col-md-12 pt-4" style="height:10%;">
+           <a href="/user/myprofile" class="text-decoration-none float-start"><i class="fa-solid fa-chevron-left fs-4" style="color: #ffffff;"></i></a>
+           <h3 class="text-center text-white"> Profile </h3>
+        </div>
+          
+      </div>
+      <div class="row px-2" style="background-color: white;">
+        <form method="post">
+            {% csrf_token %}
+            
+          <label for="name"style="margin-top: 5px;font-size: medium;color: #0D6EFD;">Full Name</label>
+          <input type="text" class="form-control shadow-none input-group"  required style="border:none;border-bottom: 1px solid lightgray;" name="name" id="name"/ >
+          <label for="profile" style="margin-top: 5px;font-size: medium;color: #0D6EFD;">Profile Picture</label>
+          <input type="file" name="profile"  id="profile" required class="form-control shadow-none input-group" style="border:none;border-bottom: 1px solid lightgray;">
+          <label style="margin-top: 5px;font-size: medium;color: #0D6EFD;" for="mob">Mobile No.</label>
+          <input type="tel" class="form-control shadow-none input-group" required  id="mob" name="mob" style="border:none;border-bottom: 1px solid lightgray;" ><br>
+          <label for="password" style="margin-top: 5px;font-size: medium;color: #0D6EFD;">Password</label>
+      <input type="password" name="password"  id="password" required class="form-control shadow-none input-group" style="border:none;border-bottom: 1px solid lightgray !important;"><br>
+      <label for="address"  style="margin-top: 5px;font-size: medium;color: #0D6EFD;">Address</label><br>
+      <textarea name="address" class="form-control shadow-none input-group" placeholder="Address" id="address" style="resize: none;" cols="85" class="form-control"
+        rows="2"></textarea><br>
+          <button type="submit" class="col-sm-12" style="background-color: #0D6EFD;border: 2px groove transparent;font-weight: 600;color: white; text-align:center ;border-radius: 5px;"> SAVE </button>
+        </form>
+        </div>
+      <div class="row px-2" style="background-color: white;height: 260px;"></div>
+      
+      
+      </div>
+  
+  
+  
+  </div>
+{% endblock %}  

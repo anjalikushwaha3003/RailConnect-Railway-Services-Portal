@@ -1,0 +1,23 @@
+<!-- input_train_number.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enter Train Number</title>
+</head>
+<body>
+    <h2>Enter Train Number</h2>
+
+    {% if error_message %}
+        <p style="color: red;">{{ error_message }}</p>
+    {% endif %}
+
+    <form method="post" action="{% url 'get_train_info' %}">
+        {% csrf_token %}
+        <label for="train_number">Train Number:</label>
+        <input type="text" id="train_number" name="train_number" required>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
